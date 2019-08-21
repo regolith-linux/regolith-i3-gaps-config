@@ -1,0 +1,5 @@
+regolith-i3-gaps-config (1.18.14-1ubuntu1ppa2) disco; urgency=medium
+
+  * Initial release, forked from regolith-i3 4.16-1ubuntu18ppa14.
+
+ -- Ken Gilmer <kgilmer@gmail.com>  Tue, 20 Aug 2019 20:41:00 -0700
