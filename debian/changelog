@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (1.18.14-1ubuntu1ppa3) disco; urgency=medium
+
+  * Add Conflicts declaration to allow replacement of regolith-i3.
+
+ -- Ken Gilmer <kgilmer@gmail.com>  Wed, 21 Aug 2019 21:53:25 -0700
+
 regolith-i3-gaps-config (1.18.14-1ubuntu1ppa2) disco; urgency=medium
 
   * Initial release, forked from regolith-i3 4.16-1ubuntu18ppa14.
