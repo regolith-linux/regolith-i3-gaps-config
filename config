@@ -5,6 +5,7 @@
 # This defines which key super maps to on your keyboard.  
 # Alt key is Mod1, and Windows key is Mod4
 set $mod Mod4
+set $alt Mod1
 
 # Color values are defined in ~/.Xresources-regolith
 
@@ -94,7 +95,7 @@ bindsym $mod+Shift+t focus mode_toggle
 # toggle tabbed mode
 bindsym $mod+t layout toggle tabbed splith splitv
 
-# switch to workspace
+# move to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
@@ -115,7 +116,7 @@ bindsym $mod+Ctrl+7 workspace $ws17
 bindsym $mod+Ctrl+8 workspace $ws18
 bindsym $mod+Ctrl+9 workspace $ws19
 
-# cycle between workspace
+# cycle across workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
 
@@ -140,7 +141,26 @@ bindsym $mod+Shift+Ctrl+7 move container to workspace $ws17
 bindsym $mod+Shift+Ctrl+8 move container to workspace $ws18
 bindsym $mod+Shift+Ctrl+9 move container to workspace $ws19
 
-bindsym $mod+Shift+grave move container to workspace $ws20
+# move focused container to workspace, move to workspace
+bindsym $mod+$alt+1 move container to workspace $ws1; workspace $ws1  
+bindsym $mod+$alt+2 move container to workspace $ws2; workspace $ws2
+bindsym $mod+$alt+3 move container to workspace $ws3; workspace $ws3
+bindsym $mod+$alt+4 move container to workspace $ws4; workspace $ws4
+bindsym $mod+$alt+5 move container to workspace $ws5; workspace $ws5
+bindsym $mod+$alt+6 move container to workspace $ws6; workspace $ws6
+bindsym $mod+$alt+7 move container to workspace $ws7; workspace $ws7
+bindsym $mod+$alt+8 move container to workspace $ws8; workspace $ws8
+bindsym $mod+$alt+9 move container to workspace $ws9; workspace $ws9
+bindsym $mod+$alt+0 move container to workspace $ws10; workspace $ws1
+bindsym $mod+$alt+Ctrl+1 move container to workspace $ws11; workspace $ws11
+bindsym $mod+$alt+Ctrl+2 move container to workspace $ws12; workspace $ws12
+bindsym $mod+$alt+Ctrl+3 move container to workspace $ws13; workspace $ws13
+bindsym $mod+$alt+Ctrl+4 move container to workspace $ws14; workspace $ws14
+bindsym $mod+$alt+Ctrl+5 move container to workspace $ws15; workspace $ws15
+bindsym $mod+$alt+Ctrl+6 move container to workspace $ws16; workspace $ws16
+bindsym $mod+$alt+Ctrl+7 move container to workspace $ws17; workspace $ws17
+bindsym $mod+$alt+Ctrl+8 move container to workspace $ws18; workspace $ws18
+bindsym $mod+$alt+Ctrl+9 move container to workspace $ws19; workspace $ws19
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -148,8 +168,14 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
-# exit i3
-bindsym $mod+Shift+e exit
+# Logout of session
+bindsym $mod+Shift+e exec /usr/bin/gnome-session-quit --logout
+
+# Reboot computer
+bindsym $mod+Shift+b exec /usr/bin/gnome-session-quit --reboot
+
+# Power off computer
+bindsym $mod+Shift+p exec /usr/bin/gnome-session-quit --power-off
 
 # lock the screen
 bindsym $mod+Escape exec gnome-screensaver-command --lock

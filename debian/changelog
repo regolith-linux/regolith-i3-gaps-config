@@ -1,3 +1,12 @@
+regolith-i3-gaps-config (1.18.15-1ubuntu1~ppa1) disco; urgency=medium
+
+  * Remove bad line from deprecated feature.
+  * Add reboot and shutdown keybindings.
+  * Use gnome-session-quit for exit operations. 
+  * Add keybindings to move window to workspace, move to workspace.
+
+ -- Ken Gilmer <kgilmer@gmail.com>  Sun, 25 Aug 2019 21:52:55 -0700
+
 regolith-i3-gaps-config (1.18.14-1ubuntu1ppa3) disco; urgency=medium
 
   * Add Conflicts declaration to allow replacement of regolith-i3.
