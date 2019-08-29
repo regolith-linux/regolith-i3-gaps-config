@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (1.18.16-1ubuntu1~ppa1) disco; urgency=medium
+
+  * Add xeventbind to refresh wallpaper upon screen resolution change. 
+
+ -- Ken Gilmer <kgilmer@gmail.com>  Wed, 28 Aug 2019 20:20:34 -0700
+
 regolith-i3-gaps-config (1.18.15-1ubuntu1~ppa1) disco; urgency=medium
 
   * Remove bad line from deprecated feature.

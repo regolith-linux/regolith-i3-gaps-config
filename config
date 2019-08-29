@@ -316,7 +316,7 @@ bar {
 
 # Run programs when i3 starts
 
-# Composite manager
+# Start the composite manager
 exec --no-startup-id compton -f --config /etc/xdg/compton.conf
 
 # Launch the shortcut Conky window on first login
@@ -324,3 +324,6 @@ exec --no-startup-id /usr/bin/regolith-ftue.sh
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
+
+# Refresh wallpaper on screen resolution change
+exec --no-startup-id /usr/bin/xeventbind resolution /usr/bin/wallpaper-refresh
