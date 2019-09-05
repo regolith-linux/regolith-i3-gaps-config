@@ -1,3 +1,16 @@
+regolith-i3-gaps-config (1.18.18-1ubuntu1~ppa1) disco; urgency=medium
+
+  * Fix compton config path.
+  * Extract config file paths to variables at top for clarity. 
+
+ -- Ken Gilmer <kgilmer@gmail.com>  Fri, 30 Aug 2019 18:16:07 -0700
+
+regolith-i3-gaps-config (1.18.17-1ubuntu1~ppa1) disco; urgency=medium
+
+  * Fix conky script paths after renamed. 
+
+ -- Ken Gilmer <kgilmer@gmail.com>  Wed, 28 Aug 2019 21:22:54 -0700
+
 regolith-i3-gaps-config (1.18.16-1ubuntu1~ppa1) disco; urgency=medium
 
   * Add xeventbind to refresh wallpaper upon screen resolution change. 

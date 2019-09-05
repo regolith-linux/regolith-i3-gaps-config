@@ -7,8 +7,16 @@
 set $mod Mod4
 set $alt Mod1
 
-# Color values are defined in ~/.Xresources-regolith
+# i3xrocks config file
+set $i3xrocks_config /etc/regolith/i3xrocks/config
 
+# compton config file
+set $compton_config /etc/regolith/compton/config
+
+# path to terminal. Override this to specify a custom terminal.
+set $terminal_path /usr/bin/st
+
+# Color values are defined in ~/.Xresources-regolith
 # These are the labels which define each i3 workspace.
 set_from_resource $ws1  i3-wm.workspace.01.name "1"
 set_from_resource $ws2  i3-wm.workspace.02.name "2"
@@ -36,7 +44,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec /usr/bin/st
+bindsym $mod+Return exec $terminal_path
 
 # start a web browser
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
@@ -84,7 +92,7 @@ bindsym $mod+minus gaps inner current minus 6
 bindsym $mod+plus gaps inner current plus 6
 
 # show/hide keybindings
-bindsym $mod+Shift+question exec --no-startup-id /usr/bin/conky-toggle.sh
+bindsym $mod+Shift+question exec --no-startup-id /usr/bin/conky-toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -297,7 +305,7 @@ set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 1
 bar {
   font $i3-wm.bar.font
   separator_symbol " "
-  status_command i3xrocks -c /etc/regolith/i3xrocks/config
+  status_command i3xrocks -c $i3xrocks_config
   tray_output none
   strip_workspace_numbers yes
 
@@ -317,10 +325,10 @@ bar {
 # Run programs when i3 starts
 
 # Start the composite manager
-exec --no-startup-id compton -f --config /etc/xdg/compton.conf
+exec --no-startup-id compton -f --config $compton_config
 
 # Launch the shortcut Conky window on first login
-exec --no-startup-id /usr/bin/regolith-ftue.sh
+exec --no-startup-id /usr/bin/regolith-ftue
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
