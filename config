@@ -159,7 +159,7 @@ bindsym $mod+$alt+6 move container to workspace number $ws6; workspace number $w
 bindsym $mod+$alt+7 move container to workspace number $ws7; workspace number $ws7
 bindsym $mod+$alt+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+$alt+9 move container to workspace number $ws9; workspace number $ws9
-bindsym $mod+$alt+0 move container to workspace number $ws10; workspace number $ws1
+bindsym $mod+$alt+0 move container to workspace number $ws10; workspace number $ws10
 bindsym $mod+$alt+Ctrl+1 move container to workspace number $ws11; workspace number $ws11
 bindsym $mod+$alt+Ctrl+2 move container to workspace number $ws12; workspace number $ws12
 bindsym $mod+$alt+Ctrl+3 move container to workspace number $ws13; workspace number $ws13
