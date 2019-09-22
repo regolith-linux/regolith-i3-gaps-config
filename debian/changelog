@@ -2,7 +2,7 @@ regolith-i3-gaps-config (1.18.19-1ubuntu1~ppa1) disco; urgency=medium
 
   * Update config to use index number when referencing i3 workspaces
 
- -- Leo Sunmo <leo.sunmo+regolith@gmail.com>  Sun, 08 Sep 2019 15:10:39 +1200
+ -- Leo Sunmo <leo.sunmo+regolith@gmail.com>  Mon, 23 Sep 2019 11:32:41 +1200
 
 regolith-i3-gaps-config (1.18.18-1ubuntu1~ppa1) disco; urgency=medium
 
