@@ -332,6 +332,3 @@ exec --no-startup-id /usr/bin/regolith-ftue
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
-
-# Refresh wallpaper on screen resolution change
-exec --no-startup-id /usr/bin/xeventbind resolution /usr/bin/wallpaper-refresh
