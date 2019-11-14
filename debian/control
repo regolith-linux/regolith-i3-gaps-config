@@ -9,5 +9,5 @@ Homepage: https://github.com/regolith-linux/regolith-i3-gaps-config
 Package: regolith-i3-gaps-config
 Architecture: any
 Depends: ${misc:Depends}
-Conflicts: regolith-i3-wm
+Conflicts: regolith-i3-wm, i3-gaps-wm, regolith-compositor
 Description: Regolith i3-gaps config file

@@ -10,9 +10,6 @@ set $alt Mod1
 # i3xrocks config file
 set $i3xrocks_config /etc/regolith/i3xrocks/config
 
-# compton config file
-set $compton_config /etc/regolith/compton/config
-
 # path to terminal. Override this to specify a custom terminal.
 set $terminal_path /usr/bin/st
 
@@ -331,7 +328,7 @@ bar {
 # Run programs when i3 starts
 
 # Start the composite manager
-exec --no-startup-id compton -f --config $compton_config
+exec --no-startup-id /usr/share/regolith-compositor/init
 
 # Launch the shortcut Conky window on first login
 exec --no-startup-id /usr/bin/regolith-ftue
