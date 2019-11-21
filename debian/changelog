@@ -1,4 +1,4 @@
-regolith-i3-gaps-config (2.0.0.1-1ubuntu1~ppa1~disco) eoan; urgency=medium
+regolith-i3-gaps-config (2.0.0.1-1ubuntu1~ppa2) eoan; urgency=medium
 
   * Update for compositor to virtual package.
 
