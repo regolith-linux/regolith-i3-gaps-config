@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.1.1-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Move Super+n from network to notification dialog 
+
+ -- Ken Gilmer <kgilmer@gmail.com>  Sat, 30 Nov 2019 13:17:19 -0800
+
 regolith-i3-gaps-config (2.1.0-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Start Rofication for notifications 
