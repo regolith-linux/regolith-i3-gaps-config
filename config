@@ -90,10 +90,6 @@ bindsym $mod+BackSpace split toggle
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 
-# change gaps interactively
-bindsym $mod+minus gaps inner current minus 6
-bindsym $mod+plus gaps inner current plus 6
-
 # show/hide keybindings
 bindsym $mod+Shift+question exec --no-startup-id /usr/bin/conky-toggle
 
@@ -225,6 +221,10 @@ mode "Resize Mode" {
         bindsym Shift+k resize grow height 12 px or 12 ppt
         bindsym Shift+j resize shrink height 12 px or 12 ppt
         bindsym Shift+l resize grow width 12 px or 12 ppt
+
+        # change gaps interactively
+        bindsym $mod+minus gaps inner current minus 6
+        bindsym $mod+plus gaps inner current plus 6
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
