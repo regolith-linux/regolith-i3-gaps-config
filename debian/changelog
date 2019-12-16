@@ -1,4 +1,4 @@
-regolith-i3-gaps-config (2.1.1-1ubuntu1~ppa2) eoan; urgency=medium
+regolith-i3-gaps-config (2.1.2-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Add i3-snapshot dependency and keybinding. 
 
