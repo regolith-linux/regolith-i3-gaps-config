@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.1.1-1ubuntu1~ppa2) eoan; urgency=medium
+
+  * Add i3-snapshot dependency and keybinding. 
+
+ -- Ken Gilmer <kgilmer@gmail.com>  Sun, 15 Dec 2019 16:33:40 -0800
+
 regolith-i3-gaps-config (2.1.1-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Move Super+n from network to notification dialog 

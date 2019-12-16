@@ -199,6 +199,10 @@ bindsym $mod+p exec gnome-control-center power
 bindsym $mod+s exec gnome-control-center sound
 bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
 
+# i3-snapshot for load/save current layout
+bindsym $mod+comma  exec /usr/local/bin/i3-snapshot -o > /tmp/i3-snapshot 
+bindsym $mod+period exec /usr/local/bin/i3-snapshot -c < /tmp/i3-snapshot
+
 # resize window (you can also use the mouse for that)
 mode "Resize Mode" {
         # These bindings trigger as soon as you enter the resize mode

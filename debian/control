@@ -10,6 +10,7 @@ Package: regolith-i3-gaps-config
 Architecture: any
 Depends: ${misc:Depends}, 
          i3-gaps-wm, 
+         i3-snapshot,
          regolith-compositor, 
          regolith-rofication
 Conflicts: regolith-i3-wm
