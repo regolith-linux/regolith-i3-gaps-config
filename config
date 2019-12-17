@@ -104,25 +104,25 @@ bindsym $mod+Shift+t focus mode_toggle
 bindsym $mod+t layout toggle tabbed splith splitv
 
 # switch to workspace
-bindsym $mod+1 workspace $ws1
-bindsym $mod+2 workspace $ws2
-bindsym $mod+3 workspace $ws3
-bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace $ws5
-bindsym $mod+6 workspace $ws6
-bindsym $mod+7 workspace $ws7
-bindsym $mod+8 workspace $ws8
-bindsym $mod+9 workspace $ws9
-bindsym $mod+0 workspace $ws10
-bindsym $mod+Ctrl+1 workspace $ws11
-bindsym $mod+Ctrl+2 workspace $ws12
-bindsym $mod+Ctrl+3 workspace $ws13
-bindsym $mod+Ctrl+4 workspace $ws14
-bindsym $mod+Ctrl+5 workspace $ws15
-bindsym $mod+Ctrl+6 workspace $ws16
-bindsym $mod+Ctrl+7 workspace $ws17
-bindsym $mod+Ctrl+8 workspace $ws18
-bindsym $mod+Ctrl+9 workspace $ws19
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+bindsym $mod+Ctrl+1 workspace number $ws11
+bindsym $mod+Ctrl+2 workspace number $ws12
+bindsym $mod+Ctrl+3 workspace number $ws13
+bindsym $mod+Ctrl+4 workspace number $ws14
+bindsym $mod+Ctrl+5 workspace number $ws15
+bindsym $mod+Ctrl+6 workspace number $ws16
+bindsym $mod+Ctrl+7 workspace number $ws17
+bindsym $mod+Ctrl+8 workspace number $ws18
+bindsym $mod+Ctrl+9 workspace number $ws19
 
 # cycle across workspaces
 bindsym $mod+Tab workspace next
