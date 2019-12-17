@@ -2,16 +2,13 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-# This defines which key super maps to on your keyboard.  
+# This defines which key super maps to on your keyboard.
 # Alt key is Mod1, and Windows key is Mod4
 set $mod Mod4
 set $alt Mod1
 
 # i3xrocks config file
 set $i3xrocks_config /etc/regolith/i3xrocks/config
-
-# compton config file
-set $compton_config /etc/regolith/compton/config
 
 # path to terminal. Override this to specify a custom terminal.
 set $terminal_path /usr/bin/st
@@ -81,15 +78,17 @@ bindsym $mod+Shift+j move down
 bindsym $mod+Shift+k move up
 bindsym $mod+Shift+l move right
 
+# move workspaces to outputs
+bindsym $mod+Ctrl+Shift+Left move workspace to output left
+bindsym $mod+Ctrl+Shift+Down move workspace to output down
+bindsym $mod+Ctrl+Shift+Up move workspace to output up
+bindsym $mod+Ctrl+Shift+Right move workspace to output right
+
 # toggle split orientation
 bindsym $mod+BackSpace split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
-
-# change gaps interactively
-bindsym $mod+minus gaps inner current minus 6
-bindsym $mod+plus gaps inner current plus 6
 
 # show/hide keybindings
 bindsym $mod+Shift+question exec --no-startup-id /usr/bin/conky-toggle
@@ -170,6 +169,7 @@ bindsym $mod+$alt+Ctrl+7 move container to workspace number $ws17; workspace num
 bindsym $mod+$alt+Ctrl+8 move container to workspace number $ws18; workspace number $ws18
 bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace number $ws19
 
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -196,9 +196,13 @@ bindsym $mod+c exec gnome-control-center
 bindsym $mod+w exec gnome-control-center wifi
 bindsym $mod+b exec gnome-control-center bluetooth
 bindsym $mod+d exec gnome-control-center display
-bindsym $mod+n exec gnome-control-center network
 bindsym $mod+p exec gnome-control-center power
 bindsym $mod+s exec gnome-control-center sound
+bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
+
+# i3-snapshot for load/save current layout
+bindsym $mod+comma  exec /usr/local/bin/i3-snapshot -o > /tmp/i3-snapshot 
+bindsym $mod+period exec /usr/local/bin/i3-snapshot -c < /tmp/i3-snapshot
 
 # resize window (you can also use the mouse for that)
 mode "Resize Mode" {
@@ -222,6 +226,10 @@ mode "Resize Mode" {
         bindsym Shift+k resize grow height 12 px or 12 ppt
         bindsym Shift+j resize shrink height 12 px or 12 ppt
         bindsym Shift+l resize grow width 12 px or 12 ppt
+
+        # change gaps interactively
+        bindsym $mod+minus gaps inner current minus 6
+        bindsym $mod+plus gaps inner current plus 6
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
@@ -251,7 +259,7 @@ set_from_resource $focused_inactive.color.border i3-wm.client.focused_inactive.c
 set_from_resource $focused_inactive.color.background i3-wm.client.focused_inactive.color.background "#073642"
 set_from_resource $focused_inactive.color.text i3-wm.client.focused_inactive.color.text "#839496"
 set_from_resource $focused_inactive.color.indicator i3-wm.client.focused_inactive.color.indicator "#073642"
-set_from_resource $focused_inactive.color.child_border i3-wm.client.focused_inactive.color.child_border 
+set_from_resource $focused_inactive.color.child_border i3-wm.client.focused_inactive.color.child_border
 
 set_from_resource $unfocused.color.border i3-wm.client.unfocused.color.border "#002b36"
 set_from_resource $unfocused.color.background i3-wm.client.unfocused.color.background "#073642"
@@ -324,8 +332,11 @@ bar {
 
 # Run programs when i3 starts
 
-# Start the composite manager
-exec --no-startup-id compton -f --config $compton_config
+# Start the installed regolith-compositor
+exec --no-startup-id /usr/share/regolith-compositor/init
+
+# Start Rofication for notifications
+exec --no-startup-id /usr/share/rofication/rofication-daemon.py
 
 # Launch the shortcut Conky window on first login
 exec --no-startup-id /usr/bin/regolith-ftue
