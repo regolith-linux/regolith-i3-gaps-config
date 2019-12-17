@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.1.3-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Update config to use index number when referencing i3 workspaces
+
+ -- Leo Sunmo <leo.sunmo+regolith@gmail.com>  Tue, 17 Dec 2019 18:30:19 +1300
+
 regolith-i3-gaps-config (2.1.2-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Add i3-snapshot dependency and keybinding. 
