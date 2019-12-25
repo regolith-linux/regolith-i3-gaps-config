@@ -91,7 +91,7 @@ bindsym $mod+BackSpace split toggle
 bindsym $mod+f fullscreen toggle
 
 # show/hide keybindings
-bindsym $mod+Shift+question exec --no-startup-id /usr/bin/conky-toggle
+bindsym $mod+Shift+question exec --no-startup-id /usr/bin/remontoire-toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
@@ -338,7 +338,7 @@ exec --no-startup-id /usr/share/regolith-compositor/init
 # Start Rofication for notifications
 exec --no-startup-id /usr/share/rofication/rofication-daemon.py
 
-# Launch the shortcut Conky window on first login
+# Launch first time user experience script
 exec --no-startup-id /usr/bin/regolith-ftue
 
 # Hide the mouse pointer if unused for a duration
