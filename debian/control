@@ -15,4 +15,5 @@ Depends: ${misc:Depends},
          regolith-ftue,
          regolith-rofication
 Conflicts: regolith-i3-wm
+Replaces: regolith-i3-wm
 Description: Regolith i3-gaps config file
