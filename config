@@ -343,3 +343,6 @@ exec --no-startup-id /usr/bin/regolith-ftue
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
+
+# Force i3 to use correct workspace label upon start
+exec --no-startup-id /usr/bin/i3-msg workspace "$(xrescat i3-wm.workspace.01.name)"
