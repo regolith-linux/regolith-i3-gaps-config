@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.2.2-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Migrate to new PPA. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 12 Jan 2020 19:11:43 -0800
+
 regolith-i3-gaps-config (2.2.1-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Work around for i3 bug in which workspace label is not used upon
