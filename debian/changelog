@@ -1,3 +1,11 @@
+regolith-i3-gaps-config (2.2.3-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Add some experimental changes from
+    https://github.com/regolith-linux/regolith-i3-gaps-config/issues/6
+  * Fix i3 startup error due to not specifying font. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Thu, 16 Jan 2020 20:44:35 -0800
+
 regolith-i3-gaps-config (2.2.2-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Migrate to new PPA. 

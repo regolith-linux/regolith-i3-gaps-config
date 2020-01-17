@@ -95,6 +95,9 @@ bindsym $mod+Shift+question exec --no-startup-id /usr/bin/remontoire-toggle
 
 # toggle tiling / floating
 bindsym $mod+Shift+f floating toggle
+bindsym $mod+Ctrl+m move to scratchpad
+bindsym $mod+Ctrl+a scratchpad show
+bindsym $mod+Ctrl+x floating disable
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+t focus mode_toggle
@@ -169,7 +172,6 @@ bindsym $mod+$alt+Ctrl+7 move container to workspace number $ws17; workspace num
 bindsym $mod+$alt+Ctrl+8 move container to workspace number $ws18; workspace number $ws18
 bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace number $ws19
 
-
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -193,16 +195,17 @@ bindsym $mod+Shift+s exec systemctl suspend
 
 # shortcuts for common system configuration tasks
 bindsym $mod+c exec gnome-control-center
-bindsym $mod+w exec gnome-control-center wifi
-bindsym $mod+b exec gnome-control-center bluetooth
 bindsym $mod+d exec gnome-control-center display
-bindsym $mod+p exec gnome-control-center power
-bindsym $mod+s exec gnome-control-center sound
+bindsym $mod+w exec gnome-control-center wifi
+bindsym $mod+Shift+n exec nautilus
 bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
 
 # i3-snapshot for load/save current layout
 bindsym $mod+comma  exec /usr/local/bin/i3-snapshot -o > /tmp/i3-snapshot 
 bindsym $mod+period exec /usr/local/bin/i3-snapshot -c < /tmp/i3-snapshot
+
+floating_maximum_size -1 x -1
+for_window [class="Gnome-control-center"] floating enable
 
 # resize window (you can also use the mouse for that)
 mode "Resize Mode" {
@@ -308,6 +311,7 @@ set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspa
 set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, FontAwesome 13"
+font $i3-wm.bar.font
 
 # Configure the bar
 bar {
