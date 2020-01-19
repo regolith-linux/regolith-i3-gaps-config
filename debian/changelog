@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.2.4-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Add keybinding to toggle bar visibility. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 19 Jan 2020 12:33:44 -0800
+
 regolith-i3-gaps-config (2.2.3-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Add some experimental changes from

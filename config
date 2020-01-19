@@ -204,6 +204,10 @@ bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
 bindsym $mod+comma  exec /usr/local/bin/i3-snapshot -o > /tmp/i3-snapshot 
 bindsym $mod+period exec /usr/local/bin/i3-snapshot -c < /tmp/i3-snapshot
 
+# Toggle bar visibility
+bindsym $mod+i bar mode toggle
+
+# Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
 for_window [class="Gnome-control-center"] floating enable
 
