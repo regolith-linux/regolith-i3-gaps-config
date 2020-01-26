@@ -1,4 +1,4 @@
-# i3 config file (v5) for Regolith Desktop Environment
+# i3 config file for the Regolith Desktop Environment
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
@@ -7,7 +7,7 @@
 set $mod Mod4
 set $alt Mod1
 
-# i3xrocks config file
+# i3xrocks config file. Override this for custom status indicators on the bar.
 set $i3xrocks_config /etc/regolith/i3xrocks/config
 
 # path to terminal. Override this to specify a custom terminal.
@@ -249,13 +249,14 @@ bindsym $mod+r mode "Resize Mode"
 new_window pixel 1
 new_float pixel 1
 
-# Gaps (i3-gaps)
+# Specify the distance between windows in pixels. (i3-gaps)
 gaps inner 5
 gaps outer 0
 
 # Only enable gaps on a workspace when there is at least one container
 smart_gaps on
 
+# Create variables from Xresources for i3's look.
 set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b36"
 set_from_resource $focused.color.background i3-wm.client.focused.color.background "#586e75"
 set_from_resource $focused.color.text i3-wm.client.focused.color.text "#fdf6e3"
@@ -294,6 +295,7 @@ popup_during_fullscreen smart
 # window focus follows your mouse movements as the mouse crosses window borders
 focus_follows_mouse no
 
+# Create variables from Xresources for i3bars's look.
 set_from_resource $i3-wm.bar.background.color i3-wm.bar.background.color "#002b36"
 set_from_resource $i3-wm.bar.statusline.color i3-wm.bar.statusline.color "#93a1a1"
 set_from_resource $i3-wm.bar.separator.color i3-wm.bar.separator.color "#268bd2"
@@ -317,7 +319,7 @@ set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urg
 set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, FontAwesome 13"
 font $i3-wm.bar.font
 
-# Configure the bar
+# The bar configuration
 bar {
   font $i3-wm.bar.font
   separator_symbol " "
@@ -338,7 +340,7 @@ bar {
   }
 }
 
-# Run programs when i3 starts
+# The following exec calls run programs in the background when i3 starts.
 
 # Start the installed regolith-compositor
 exec --no-startup-id /usr/share/regolith-compositor/init
@@ -351,6 +353,3 @@ exec --no-startup-id /usr/bin/regolith-ftue
 
 # Hide the mouse pointer if unused for a duration
 exec --no-startup-id /usr/bin/unclutter -b
-
-# Force i3 to use correct workspace label upon start
-exec --no-startup-id /usr/bin/i3-msg workspace "$(xrescat i3-wm.workspace.01.name)"

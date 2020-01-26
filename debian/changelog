@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.2.5-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Remove hack to fix workspace label on primary screen, as root-cause is
+    fixed in i3-gaps.  See https://github.com/regolith-linux/speed-ricer/compare/f4239c0f0881...96bcb932fd59.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 25 Jan 2020 20:03:24 -0800
+
 regolith-i3-gaps-config (2.2.4-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Add keybinding to toggle bar visibility. 
