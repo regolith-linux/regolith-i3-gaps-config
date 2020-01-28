@@ -234,8 +234,10 @@ mode "Resize Mode" {
         bindsym Shift+l resize grow width 12 px or 12 ppt
 
         # change gaps interactively
-        bindsym $mod+minus gaps inner current minus 6
-        bindsym $mod+plus gaps inner current plus 6
+        bindsym minus gaps inner current minus 6
+        bindsym plus gaps inner current plus 6
+        bindsym Shift+minus gaps inner current minus 12
+        bindsym Shift+plus gaps inner current plus 12
 
         # back to normal: Enter or Escape
         bindsym Return mode "default"
