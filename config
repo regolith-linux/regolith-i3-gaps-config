@@ -97,7 +97,6 @@ bindsym $mod+Shift+question exec --no-startup-id /usr/bin/remontoire-toggle
 bindsym $mod+Shift+f floating toggle
 bindsym $mod+Ctrl+m move to scratchpad
 bindsym $mod+Ctrl+a scratchpad show
-bindsym $mod+Ctrl+x floating disable
 
 # change focus between tiling / floating windows
 bindsym $mod+Shift+t focus mode_toggle
@@ -201,8 +200,8 @@ bindsym $mod+Shift+n exec nautilus
 bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
 
 # i3-snapshot for load/save current layout
-bindsym $mod+comma  exec /usr/local/bin/i3-snapshot -o > /tmp/i3-snapshot 
-bindsym $mod+period exec /usr/local/bin/i3-snapshot -c < /tmp/i3-snapshot
+bindsym $mod+comma  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot 
+bindsym $mod+period exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot
 
 # Toggle bar visibility
 bindsym $mod+i bar mode toggle
