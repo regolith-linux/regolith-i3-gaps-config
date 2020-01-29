@@ -47,7 +47,8 @@ bindsym $mod+Return exec $terminal_path
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
 
 # kill focused window
-bindsym $mod+Shift+q kill
+bindsym $mod+q [con_id="__focused__"] kill
+bindsym $mod+Shift+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
 
 set_from_resource $rofiTheme rofi.theme "regolith-theme"
 
@@ -322,6 +323,7 @@ font $i3-wm.bar.font
 
 # The bar configuration
 bar {
+  position bottom
   font $i3-wm.bar.font
   separator_symbol " "
   status_command i3xrocks -c $i3xrocks_config
