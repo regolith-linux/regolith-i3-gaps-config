@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.2.8-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Package @tomster's fix for migrating from deprecated config keywords. 
+  * Change kill commands to be consistent w/ previous keybindings.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Tue, 04 Feb 2020 20:26:47 -0800
+
 regolith-i3-gaps-config (2.2.7-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Tweak gap resize for consistency. 
