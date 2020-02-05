@@ -248,8 +248,8 @@ mode "Resize Mode" {
 bindsym $mod+r mode "Resize Mode"
 
 # Disable titlebar
-new_window pixel 1
-new_float pixel 1
+default_border pixel 1
+default_floating_border pixel 1
 
 # Specify the distance between windows in pixels. (i3-gaps)
 gaps inner 5
