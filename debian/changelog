@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.2.9-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Add dependency on xdotool for kill TERM keybinding. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 08 Feb 2020 16:44:27 -0800
+
 regolith-i3-gaps-config (2.2.8-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Package @tomster's fix for migrating from deprecated config keywords. 

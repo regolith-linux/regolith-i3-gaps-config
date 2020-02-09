@@ -13,7 +13,8 @@ Depends: ${misc:Depends},
          i3-snapshot,
          regolith-compositor,
          regolith-ftue,
-         regolith-rofication
+         regolith-rofication,
+         xdotool
 Conflicts: regolith-i3-wm
 Replaces: regolith-i3-wm
 Description: Regolith i3-gaps config file
