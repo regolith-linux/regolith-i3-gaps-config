@@ -323,9 +323,7 @@ set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspa
 set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, FontAwesome 13"
-
 set_from_resource $i3-wm.bar.position i3-wm.bar.position "bottom"
-font $i3-wm.bar.font
 
 # The bar configuration
 bar {
