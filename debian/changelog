@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.3.2-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Defer to gnome setting for default browser over update-alternatives. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 16 Feb 2020 10:22:40 -0800
+
 regolith-i3-gaps-config (2.3.1-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Fix typo in last Xresource change.

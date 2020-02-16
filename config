@@ -38,7 +38,7 @@ hide_edge_borders smart
 bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 
 # start a web browser
-bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
+bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 
 # kill focused window
 bindsym $mod+Shift+q [con_id="__focused__"] kill
