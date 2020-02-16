@@ -4,14 +4,8 @@
 
 # This defines which key super maps to on your keyboard.
 # Alt key is Mod1, and Windows key is Mod4
-set $mod Mod4
-set $alt Mod1
-
-# i3xrocks config file. Override this for custom status indicators on the bar.
-set $i3xrocks_config /etc/regolith/i3xrocks/config
-
-# path to terminal. Override this to specify a custom terminal.
-set $terminal_path /usr/bin/st
+set_from_resource $mod  i3-wm.mod Mod4
+set_from_resource $alt  i3-wm.alt Mod1
 
 # Color values are defined in ~/.Xresources-regolith
 # These are the labels which define each i3 workspace.
@@ -41,7 +35,7 @@ floating_modifier $mod
 hide_edge_borders smart
 
 # start a terminal
-bindsym $mod+Return exec $terminal_path
+bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 
 # start a web browser
 bindsym $mod+Shift+Return exec /usr/bin/sensible-browser
@@ -175,7 +169,7 @@ bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace num
 # reload the configuration file
 bindsym $mod+Shift+c reload
 
-# restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
+# restart i3 in place (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 
 # Logout of session
@@ -322,19 +316,26 @@ set_from_resource $i3-wm.bar.workspace.urgent.border.color i3-wm.bar.workspace.u
 set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspace.urgent.background.color "#dc322f"
 set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
-set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, FontAwesome 13"
+# Sets i3 font for dialogs
+font $i3-wm.bar.font
 
 set_from_resource $i3-wm.bar.position i3-wm.bar.position "bottom"
-font $i3-wm.bar.font
+set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, FontAwesome 13"
+set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
+set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput none
+set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
+
+# i3xrocks config file. Override this for custom status indicators on the bar.
+set_from_resource $i3-wm.i3xrocks.config i3-wm.i3xrocks.config "/etc/regolith/i3xrocks/config"
 
 # The bar configuration
 bar {
-  position $i3-wm.bar.position i3-wm.bar.position
+  position $i3-wm.bar.position
   font $i3-wm.bar.font
-  separator_symbol " "
-  status_command i3xrocks -c $i3xrocks_config
-  tray_output none
-  strip_workspace_numbers yes
+  separator_symbol $i3-wm.bar.separator
+  status_command i3xrocks -c $i3-wm.i3xrocks.config
+  tray_output $i3-wm.bar.trayoutput
+  strip_workspace_numbers $i3-wm.bar.stripworkspacenumbers
 
   colors {
       background $i3-wm.bar.background.color
