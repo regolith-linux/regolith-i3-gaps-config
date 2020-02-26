@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.3.4-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Take @ekostem's suggested keybinding for workspace traversal.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 26 Feb 2020 07:43:44 -0800
+
 regolith-i3-gaps-config (2.3.3-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Use Remontoire compatible comments in i3 config. 

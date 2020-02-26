@@ -121,10 +121,15 @@ bindsym $mod+Ctrl+7 workspace number $ws17
 bindsym $mod+Ctrl+8 workspace number $ws18
 bindsym $mod+Ctrl+9 workspace number $ws19
 
+# Workspace Navigation
 ## Navigate // Next Workspace // <Super> Tab ##
 bindsym $mod+Tab workspace next
+## Navigate // Next Workspace // <Super><Alt> → ##
+bindsym $mod+$alt+Right workspace next
 ## Navigate // Previous Workspace // <Super><Shift> Tab ##
 bindsym $mod+Shift+Tab workspace prev
+## Navigate // Previous Workspace // <Super><Alt> ← ##
+bindsym $mod+$alt+Left workspace prev
 
 ## Modify // Move Window to Workspace // <Super><Shift> 0..9 ##
 bindsym $mod+Shift+1 move container to workspace number $ws1
