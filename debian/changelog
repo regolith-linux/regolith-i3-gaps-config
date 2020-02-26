@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.3.3-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Use Remontoire compatible comments in i3 config. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Tue, 25 Feb 2020 20:07:13 -0800
+
 regolith-i3-gaps-config (2.3.2-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Defer to gnome setting for default browser over update-alternatives. 
