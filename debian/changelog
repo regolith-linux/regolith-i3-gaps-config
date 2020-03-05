@@ -1,3 +1,11 @@
+regolith-i3-gaps-config (2.3.5-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Fix incorrectly quoted defaults for new Xresource settings for i3 config
+    entries.
+  * Fix incorrect Xresource key for i3 font. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 04 Mar 2020 19:51:49 -0800
+
 regolith-i3-gaps-config (2.3.4-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Take @ekostem's suggested keybinding for workspace traversal.

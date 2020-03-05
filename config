@@ -270,14 +270,14 @@ bindsym $mod+r mode "Resize Mode"
 bindsym $mod+Shift+question exec --no-startup-id /usr/bin/remontoire-toggle
 
 # Disable titlebar
-set_from_resource $i3-wm.window.border.size i3-wm.window.border.size "1"
-set_from_resource $i3-wm.floatingwindow.border.size i3-wm.floatingwindow.border.size "1"
+set_from_resource $i3-wm.window.border.size i3-wm.window.border.size 1
+set_from_resource $i3-wm.floatingwindow.border.size i3-wm.floatingwindow.border.size 1
 default_border pixel $i3-wm.window.border.size
 default_floating_border pixel $i3-wm.floatingwindow.border.size
 
 # Specify the distance between windows in pixels. (i3-gaps)
-set_from_resource $i3-wm.gaps.inner.size i3-wm.gaps.inner.size "5"
-set_from_resource $i3-wm.gaps.outer.size i3-wm.gaps.outer.size "0"
+set_from_resource $i3-wm.gaps.inner.size i3-wm.gaps.inner.size 5
+set_from_resource $i3-wm.gaps.outer.size i3-wm.gaps.outer.size 0
 gaps inner $i3-wm.gaps.inner.size
 gaps outer $i3-wm.gaps.outer.size
 
@@ -345,9 +345,9 @@ set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspa
 set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 # Sets i3 font for dialogs
-font $i3-wm.bar.font
+font $i3-wm.font
 
-set_from_resource $i3-wm.bar.position i3-wm.bar.position "bottom"
+set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
 set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, FontAwesome 13"
 set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
 set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput none
