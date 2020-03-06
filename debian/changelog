@@ -1,3 +1,11 @@
+regolith-i3-gaps-config (2.3.6-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Fix previous fix that didn't load i3 font from Xresources, pointed out by
+    @uselessthird. 
+  * Update fallback bar font to match default Cahuella theme.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Thu, 05 Mar 2020 21:36:40 -0800
+
 regolith-i3-gaps-config (2.3.5-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Fix incorrectly quoted defaults for new Xresource settings for i3 config
