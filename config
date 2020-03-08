@@ -184,7 +184,7 @@ bindsym $mod+$alt+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotoo
 ## Session // Reload i3 Config // <Super><Shift> c ##
 bindsym $mod+Shift+c reload
 
-# Session // Restart i3 // <Super><Shift> r ##
+## Session // Restart i3 // <Super><Shift> r ##
 bindsym $mod+Shift+r restart
 
 ## Session // Logout // <Super><Shift> e ##

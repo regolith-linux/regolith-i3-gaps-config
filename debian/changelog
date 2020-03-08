@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.3.7-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Fix typo on i3 reload comment. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 08 Mar 2020 09:26:38 -0700
+
 regolith-i3-gaps-config (2.3.6-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Fix previous fix that didn't load i3 font from Xresources, pointed out by
