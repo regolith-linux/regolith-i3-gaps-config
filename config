@@ -1,14 +1,24 @@
 # i3 config file for the Regolith Desktop Environment
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
+# 
+# In this config file, may values are taken from Xresources with the directive set_from_resource:
+#
+# set_from_resource <i3 variable name> <Xresources key> <default value if Xresource undefined>
 
-# This defines which key super maps to on your keyboard.
+####################################
+# Meta Key Mappings
 # Alt key is Mod1, and Windows key is Mod4
+####################################
+
 set_from_resource $mod  i3-wm.mod Mod4
 set_from_resource $alt  i3-wm.alt Mod1
 
-# Color values are defined in ~/.Xresources-regolith
+####################################
+# Workspace Names
 # These are the labels which define each i3 workspace.
+####################################
+
 set_from_resource $ws1  i3-wm.workspace.01.name "1"
 set_from_resource $ws2  i3-wm.workspace.02.name "2"
 set_from_resource $ws3  i3-wm.workspace.03.name "3"
@@ -40,15 +50,31 @@ bindsym $mod+Return exec /usr/bin/x-terminal-emulator
 ## Launch // Browser // <Super><Shift> Enter ##
 bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
 
-set_from_resource $rofiTheme rofi.theme "regolith-theme"
+####################################
+# Launcher dialogs
+####################################
 
-# rofi app and window launchers
+set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/cahuella/rofi.rasi
+
 ## Launch // Application // <Super> Space ##
-bindsym $mod+space exec rofi -show drun -theme $rofiTheme
+set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $rofiTheme
+bindsym $mod+space exec $i3-wm.program.launcher.app
+
 ## Launch // Command // <Super><Shift> Space ##
-bindsym $mod+Shift+space exec rofi -show run -theme $rofiTheme
+set_from_resource $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -show run -theme $rofiTheme
+bindsym $mod+Shift+space exec $i3-wm.program.launcher.cmd
+
 ## Navigate // Window by Name // <Super><Ctrl> Space ##
-bindsym $mod+Ctrl+space exec rofi -show window -theme $rofiTheme
+set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -theme $rofiTheme
+bindsym $mod+Ctrl+space exec $i3-wm.program.launcher.window
+
+## Launch // This Dialog // <Super><Shift> ? ##
+set_from_resource $i3-wm.program.help i3-wm.program.help /usr/bin/remontoire-toggle
+bindsym $mod+Shift+question exec --no-startup-id $i3-wm.program.help
+
+####################################
+# Window and Workspace Navigation
+####################################
 
 ## Navigate // Relative Window // <Super> ↑ ↓ ← →
 bindsym $mod+Left focus left
@@ -61,6 +87,47 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+
+## Navigate // Workspaces 1-10 // <Super> 0..9 ##
+bindsym $mod+1 workspace number $ws1
+bindsym $mod+2 workspace number $ws2
+bindsym $mod+3 workspace number $ws3
+bindsym $mod+4 workspace number $ws4
+bindsym $mod+5 workspace number $ws5
+bindsym $mod+6 workspace number $ws6
+bindsym $mod+7 workspace number $ws7
+bindsym $mod+8 workspace number $ws8
+bindsym $mod+9 workspace number $ws9
+bindsym $mod+0 workspace number $ws10
+## Navigate // Workspace 11 - 19 // <Super><Ctrl> 0..9 ##
+bindsym $mod+Ctrl+1 workspace number $ws11
+bindsym $mod+Ctrl+2 workspace number $ws12
+bindsym $mod+Ctrl+3 workspace number $ws13
+bindsym $mod+Ctrl+4 workspace number $ws14
+bindsym $mod+Ctrl+5 workspace number $ws15
+bindsym $mod+Ctrl+6 workspace number $ws16
+bindsym $mod+Ctrl+7 workspace number $ws17
+bindsym $mod+Ctrl+8 workspace number $ws18
+bindsym $mod+Ctrl+9 workspace number $ws19
+
+## Navigate // Next Workspace // <Super> Tab ##
+bindsym $mod+Tab workspace next
+
+## Navigate // Next Workspace // <Super><Alt> → ##
+bindsym $mod+$alt+Right workspace next
+
+## Navigate // Previous Workspace // <Super><Shift> Tab ##
+bindsym $mod+Shift+Tab workspace prev
+
+## Navigate // Previous Workspace // <Super><Alt> ← ##
+bindsym $mod+$alt+Left workspace prev
+
+## Navigate // Scratchpad // <Super><Ctrl> a ##
+bindsym $mod+Ctrl+a scratchpad show
+
+####################################
+# Window and Workspace Configuration
+####################################
 
 ## Modify // Window Position // <Super><Shift> ↑ ↓ ← → ##
 bindsym $mod+Shift+Left move left
@@ -88,50 +155,17 @@ bindsym $mod+f fullscreen toggle
 
 ## Modify // Window Floating Toggle // <Super><Shift> f ##
 bindsym $mod+Shift+f floating toggle
+
 ## Modify // Move to Scratchpad // <Super><Ctrl> m ##
 bindsym $mod+Ctrl+m move to scratchpad
-## Navigate // Scratchpad // <Super><Ctrl> a ##
-bindsym $mod+Ctrl+a scratchpad show
 
-## Navigate // Tile/Float Focus Toggle // <Super><Shift> t ##
+## Modify // Tile/Float Focus Toggle // <Super><Shift> t ##
 bindsym $mod+Shift+t focus mode_toggle
 
 ## Modify // Window Layout Mode // <Super> t ##
 bindsym $mod+t layout toggle tabbed splith splitv
 
-## Navigate // Workspace // <Super> 0..9 ##
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
-## Navigate // Workspace // <Super><Ctrl> 0..9 ##
-bindsym $mod+Ctrl+1 workspace number $ws11
-bindsym $mod+Ctrl+2 workspace number $ws12
-bindsym $mod+Ctrl+3 workspace number $ws13
-bindsym $mod+Ctrl+4 workspace number $ws14
-bindsym $mod+Ctrl+5 workspace number $ws15
-bindsym $mod+Ctrl+6 workspace number $ws16
-bindsym $mod+Ctrl+7 workspace number $ws17
-bindsym $mod+Ctrl+8 workspace number $ws18
-bindsym $mod+Ctrl+9 workspace number $ws19
-
-# Workspace Navigation
-## Navigate // Next Workspace // <Super> Tab ##
-bindsym $mod+Tab workspace next
-## Navigate // Next Workspace // <Super><Alt> → ##
-bindsym $mod+$alt+Right workspace next
-## Navigate // Previous Workspace // <Super><Shift> Tab ##
-bindsym $mod+Shift+Tab workspace prev
-## Navigate // Previous Workspace // <Super><Alt> ← ##
-bindsym $mod+$alt+Left workspace prev
-
-## Modify // Move Window to Workspace // <Super><Shift> 0..9 ##
+## Modify // Move Window to Workspace 1 - 10 // <Super><Shift> 0..9 ##
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -142,7 +176,7 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-## Modify // Move Window to Workspace // <Super><Ctrl><Shift> 0..9 ##
+## Modify // Move Window to Workspace 11 - 19// <Super><Ctrl><Shift> 0..9 ##
 bindsym $mod+Shift+Ctrl+1 move container to workspace number $ws11
 bindsym $mod+Shift+Ctrl+2 move container to workspace number $ws12
 bindsym $mod+Shift+Ctrl+3 move container to workspace number $ws13
@@ -154,7 +188,7 @@ bindsym $mod+Shift+Ctrl+8 move container to workspace number $ws18
 bindsym $mod+Shift+Ctrl+9 move container to workspace number $ws19
 
 # move focused container to workspace, move to workspace
-## Modify // Take Window to Workspace // <Super><Alt> 0..9 ##
+## Modify // Carry Window to Workspace 1 - 10// <Super><Alt> 0..9 ##
 bindsym $mod+$alt+1 move container to workspace number $ws1; workspace number $ws1  
 bindsym $mod+$alt+2 move container to workspace number $ws2; workspace number $ws2
 bindsym $mod+$alt+3 move container to workspace number $ws3; workspace number $ws3
@@ -165,7 +199,7 @@ bindsym $mod+$alt+7 move container to workspace number $ws7; workspace number $w
 bindsym $mod+$alt+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+$alt+9 move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+$alt+0 move container to workspace number $ws10; workspace number $ws10
-## Modify // Take Window to Workspace // <Super><Alt><Ctrl> 0..9 ##
+## Modify // Carry Window to Workspace 11 - 19 // <Super><Alt><Ctrl> 0..9 ##
 bindsym $mod+$alt+Ctrl+1 move container to workspace number $ws11; workspace number $ws11
 bindsym $mod+$alt+Ctrl+2 move container to workspace number $ws12; workspace number $ws12
 bindsym $mod+$alt+Ctrl+3 move container to workspace number $ws13; workspace number $ws13
@@ -176,42 +210,73 @@ bindsym $mod+$alt+Ctrl+7 move container to workspace number $ws17; workspace num
 bindsym $mod+$alt+Ctrl+8 move container to workspace number $ws18; workspace number $ws18
 bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace number $ws19
 
+####################################
+# Session Management
+####################################
+
 ## Session // Exit App // <Super><Shift> q ##
 bindsym $mod+Shift+q [con_id="__focused__"] kill
-## Session // Kill App // <Super><Alt> q ##
+
+## Session // Terminate App // <Super><Alt> q ##
 bindsym $mod+$alt+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
 
 ## Session // Reload i3 Config // <Super><Shift> c ##
 bindsym $mod+Shift+c reload
 
-## Session // Restart i3 // <Super><Shift> r ##
-bindsym $mod+Shift+r restart
+## Session // Refresh Session // <Super><Shift> r ##
+set_from_resource $i3-wm.program.refresh_ui i3-wm.program.refresh_ui /usr/bin/regolith-look refresh
+bindsym $mod+Shift+r exec --no-startup-id $i3-wm.program.refresh_ui
+
+## Session // Restart i3 // <Super><Ctrl> r ##
+bindsym $mod+Ctrl+r restart
 
 ## Session // Logout // <Super><Shift> e ##
-bindsym $mod+Shift+e exec /usr/bin/gnome-session-quit --logout
+set_from_resource $i3-wm.program.logout i3-wm.program.logout /usr/bin/gnome-session-quit --logout
+bindsym $mod+Shift+e exec $i3-wm.program.logout
 
 ## Session // Reboot // <Super><Shift> b ##
-bindsym $mod+Shift+b exec /usr/bin/gnome-session-quit --reboot
+set_from_resource $i3-wm.program.reboot i3-wm.program.reboot /usr/bin/gnome-session-quit --reboot
+bindsym $mod+Shift+b exec $i3-wm.program.reboot
 
 ## Session // Power Down // <Super><Shift> p ##
-bindsym $mod+Shift+p exec /usr/bin/gnome-session-quit --power-off
+set_from_resource $i3-wm.program.shutdown i3-wm.program.shutdown /usr/bin/gnome-session-quit --power-off
+bindsym $mod+Shift+p exec $i3-wm.program.shutdown
 
 ## Session // Lock Screen // <Super> Escape ##
-bindsym $mod+Escape exec gnome-screensaver-command --lock
+set_from_resource $i3-wm.program.lock i3-wm.program.lock gnome-screensaver-command --lock
+bindsym $mod+Escape exec $i3-wm.program.lock
 
 ## Session // Sleep // <Super><Shift> s ##
-bindsym $mod+Shift+s exec systemctl suspend
+set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
+bindsym $mod+Shift+s exec $i3-wm.program.sleep
+
+####################################
+# System Management
+####################################
 
 ## Modify // Settings // <Super> c ##
-bindsym $mod+c exec gnome-control-center
+set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center
+bindsym $mod+c exec $i3-wm.program.settings
+
 ## Modify // Display Settings // <Super> d ##
-bindsym $mod+d exec gnome-control-center display
+set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center display
+bindsym $mod+d exec $i3-wm.program.display
+
 ## Modify // Wifi Settings // <Super> w ##
-bindsym $mod+w exec gnome-control-center wifi
+set_from_resource $i3-wm.program.wifi i3-wm.program.wifi gnome-control-center wifi
+bindsym $mod+w exec $i3-wm.program.wifi
+
 ## Launch // File Browser // <Super><Shift> n ##
-bindsym $mod+Shift+n exec nautilus
+set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus
+bindsym $mod+Shift+n exec $i3-wm.program.files
+
 ## Launch // Notification Viewer // <Super> n ##
-bindsym $mod+n exec /usr/share/rofication/rofication-gui.py
+set_from_resource $i3-wm.program.notification_ui i3-wm.program.notification_ui /usr/share/rofication/rofication-gui.py
+bindsym $mod+n exec $i3-wm.program.notification_ui
+
+####################################
+# Workspace Management
+####################################
 
 # i3-snapshot for load/save current layout
 ## Modify // Save Window Layout // <Super> , ##
@@ -226,6 +291,10 @@ bindsym $mod+i bar mode toggle
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
 for_window [class="Gnome-control-center"] floating enable
+
+####################################
+# Window Resize and Gaps
+####################################
 
 ## Resize // Enter Resize Mode // <Super> r ##
 mode "Resize Mode" {
@@ -266,8 +335,9 @@ mode "Resize Mode" {
 }
 bindsym $mod+r mode "Resize Mode"
 
-## Other // Toggle this Dialog // <Super><Shift> ? ##
-bindsym $mod+Shift+question exec --no-startup-id /usr/bin/remontoire-toggle
+####################################
+# i3 Appearance and Behavior
+####################################
 
 # Disable titlebar
 set_from_resource $i3-wm.window.border.size i3-wm.window.border.size 1
@@ -282,7 +352,20 @@ gaps inner $i3-wm.gaps.inner.size
 gaps outer $i3-wm.gaps.outer.size
 
 # Only enable gaps on a workspace when there is at least one container
-smart_gaps on
+set_from_resource $i3-wm.gaps.smart i3-wm.gaps.smart on
+smart_gaps $i3-wm.gaps.smart
+
+# Enable popup during fullscreen
+set_from_resource $i3-wm.gaps.popup_during_fullscreen i3-wm.gaps.popup_during_fullscreen smart
+popup_during_fullscreen $i3-wm.gaps.popup_during_fullscreen
+
+# window focus follows your mouse movements as the mouse crosses window borders
+set_from_resource $i3-wm.gaps.focus_follows_mouse i3-wm.gaps.focus_follows_mouse no
+focus_follows_mouse no
+
+####################################
+# i3 Colors and Fonts
+####################################
 
 # Create variables from Xresources for i3's look.
 set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b36"
@@ -317,12 +400,6 @@ client.focused_inactive $focused_inactive.color.border     $focused_inactive.col
 client.unfocused        $unfocused.color.border            $unfocused.color.background        $unfocused.color.text              $unfocused.color.indicator         $unfocused.color.child_border
 client.urgent           $urgent.color.border               $urgent.color.background           $urgent.color.text                 $urgent.color.indicator            $urgent.color.child_border
 
-# Enable popup during fullscreen
-popup_during_fullscreen smart
-
-# window focus follows your mouse movements as the mouse crosses window borders
-focus_follows_mouse no
-
 # Create variables from Xresources for i3bars's look.
 set_from_resource $i3-wm.bar.background.color i3-wm.bar.background.color "#002b36"
 set_from_resource $i3-wm.bar.statusline.color i3-wm.bar.statusline.color "#93a1a1"
@@ -345,11 +422,15 @@ set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspa
 set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
 
 # Sets i3 font for dialogs
-set_from_resource $i3-wm.font i3-wm.font "pango:Source Code Pro Medium 13"
+set_from_resource $i3-wm.font i3-wm.font pango:Source Code Pro Medium 13
 font $i3-wm.font
 
+####################################
+# i3 Bar
+####################################
+
 set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
-set_from_resource $i3-wm.bar.font i3-wm.bar.font "pango:Source Code Pro Medium 13, Material Design Icons 13"
+set_from_resource $i3-wm.bar.font i3-wm.bar.font pango:Source Code Pro Medium 13, Material Design Icons 13
 set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
 set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput none
 set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
@@ -379,16 +460,35 @@ bar {
   }
 }
 
-# The following exec calls run programs in the background when i3 starts.
+####################################
+# External programs launched with i3
+####################################
 
 # Start the installed regolith-compositor
-exec --no-startup-id /usr/share/regolith-compositor/init
+set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/regolith-compositor/init
+exec --no-startup-id $i3-wm.program.compositor
 
 # Start Rofication for notifications
-exec --no-startup-id /usr/share/rofication/rofication-daemon.py
+set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/share/rofication/rofication-daemon.py
+exec --no-startup-id $i3-wm.program.notifications
 
 # Launch first time user experience script
-exec --no-startup-id /usr/bin/regolith-ftue
+set_from_resource $i3-wm.program.ftui i3-wm.program.ftui /usr/bin/regolith-ftue
+exec --no-startup-id $i3-wm.program.ftui
 
 # Hide the mouse pointer if unused for a duration
-exec --no-startup-id /usr/bin/unclutter -b
+set_from_resource $i3-wm.program.unclutter i3-wm.program.unclutter /usr/bin/regolith-ftue /usr/bin/unclutter -b
+exec --no-startup-id $i3-wm.program.unclutter
+
+# User programs from Xresources
+# To use, define an Xresource key i3-wm.program.[1-5] with the value of the program to launch.
+set_from_resource $i3-wm.program.1 i3-wm.program.1 :
+exec --no-startup-id $i3-wm.program.1
+set_from_resource $i3-wm.program.2 i3-wm.program.2 :
+exec --no-startup-id $i3-wm.program.2
+set_from_resource $i3-wm.program.3 i3-wm.program.3 :
+exec --no-startup-id $i3-wm.program.3
+set_from_resource $i3-wm.program.4 i3-wm.program.4 :
+exec --no-startup-id $i3-wm.program.4
+set_from_resource $i3-wm.program.5 i3-wm.program.5 :
+exec --no-startup-id $i3-wm.program.5

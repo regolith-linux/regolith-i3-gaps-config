@@ -1,6 +1,10 @@
-regolith-i3-gaps-config (2.3.7-1ubuntu1~ppa1) eoan; urgency=medium
+regolith-i3-gaps-config (2.4.0) eoan; urgency=medium
 
   * Fix typo on i3 reload comment. 
+  * Add comment headers and group config by function.
+  * Allow for overriding more defaults via Xresources.
+  * Allow specifying custom programs to launch via Xresources.
+  * Cleanup Remontoire comment headers.
 
  -- Regolith Linux <regolith.linux@gmail.com>  Sun, 08 Mar 2020 09:26:38 -0700
 
