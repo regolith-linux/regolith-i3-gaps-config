@@ -15,9 +15,9 @@ Depends: ${misc:Depends},
   regolith-compositor,
   regolith-ftue,
   regolith-rofi-config,
-  regolith-rofication,
   regolith-styles,
   xdotool
 Conflicts: regolith-i3-wm
 Replaces: regolith-i3-wm
+Recommends: regolith-rofication
 Description: Regolith i3-gaps config file

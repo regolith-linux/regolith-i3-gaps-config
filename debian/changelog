@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.4.3) eoan; urgency=medium
+
+  * Remove hard dependency on regolith-rofication. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 22 Mar 2020 16:10:44 -0700
+
 regolith-i3-gaps-config (2.4.2) eoan; urgency=medium
 
   * Fix modi URI for file search dialog. 
