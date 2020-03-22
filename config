@@ -72,6 +72,10 @@ bindsym $mod+Ctrl+space exec $i3-wm.program.launcher.window
 set_from_resource $i3-wm.program.help i3-wm.program.help /usr/bin/remontoire-toggle
 bindsym $mod+Shift+question exec --no-startup-id $i3-wm.program.help
 
+## Launch // File Search // <Super><Alt> Space ##
+set_from_resource $i3-wm.program.file_search i3-wm.program.file_search rofi -show find -modi /usr/share/rofi/modi/finder.sh
+bindsym $mod+Alt+space exec $i3-wm.program.file_search
+
 ####################################
 # Window and Workspace Navigation
 ####################################

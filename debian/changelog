@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.4.1) eoan; urgency=medium
+
+  * Integrate Rofi file search dialog into config. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 21 Mar 2020 21:47:05 -0700
+
 regolith-i3-gaps-config (2.4.0) eoan; urgency=medium
 
   * Fix typo on i3 reload comment. 
