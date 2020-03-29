@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.4.4) eoan; urgency=medium
+
+  * Move to i3xrocks conf.d style configuration. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 29 Mar 2020 11:21:40 -0700
+
 regolith-i3-gaps-config (2.4.3) eoan; urgency=medium
 
   * Remove hard dependency on regolith-rofication. 
