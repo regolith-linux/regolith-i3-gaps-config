@@ -9,7 +9,6 @@ Homepage: https://github.com/regolith-linux/regolith-i3-gaps-config
 Package: regolith-i3-gaps-config
 Architecture: any
 Depends: ${misc:Depends},
-  fonts-font-awesome,
   i3-gaps-wm,
   i3-snapshot,
   regolith-compositor,

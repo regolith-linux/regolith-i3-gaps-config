@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.4.5) eoan; urgency=medium
+
+  * Fix versioning from previous version.
+  * Minor tweaks to config file. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 01 Apr 2020 21:23:45 -0700
+
 regolith-i3-gaps-config (2.4.4ubuntu1) eoan; urgency=medium
 
   * Add Xres overrides documentation as comments.
