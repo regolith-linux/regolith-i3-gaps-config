@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.4.6) eoan; urgency=medium
+
+  * Add font dependency back in for remonotoire.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Thu, 02 Apr 2020 14:21:21 -0700
+
 regolith-i3-gaps-config (2.4.5) eoan; urgency=medium
 
   * Fix versioning from previous version.
