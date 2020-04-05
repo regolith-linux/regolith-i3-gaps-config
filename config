@@ -303,7 +303,7 @@ set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control
 bindsym $mod+b exec $i3-wm.program.bluetooth
 
 ## Launch // File Browser // <><Shift> n ##
-set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus
+set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --new-window
 bindsym $mod+Shift+n exec $i3-wm.program.files
 
 ## Launch // Notification Viewer // <> n ##

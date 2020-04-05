@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.4.7) eoan; urgency=medium
+
+  * Cause Nautilus keybinding to always launch new window. From
+    https://www.youtube.com/watch?v=1gKfgRxKiis. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 05 Apr 2020 10:45:50 -0700
+
 regolith-i3-gaps-config (2.4.6) eoan; urgency=medium
 
   * Add font dependency back in for remonotoire.
