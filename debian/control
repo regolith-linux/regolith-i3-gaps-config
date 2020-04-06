@@ -16,6 +16,7 @@ Depends: ${misc:Depends},
   regolith-ftue,
   regolith-rofi-config,
   regolith-styles,
+  xdg-utils,
   xdotool
 Conflicts: regolith-i3-wm
 Replaces: regolith-i3-wm

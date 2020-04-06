@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.4.8) eoan; urgency=medium
+
+  * Comment cleanup. 
+  * Depend on xgd-utils for xdg-settings. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 06 Apr 2020 08:55:13 -0700
+
 regolith-i3-gaps-config (2.4.7) eoan; urgency=medium
 
   * Cause Nautilus keybinding to always launch new window. From
