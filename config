@@ -307,7 +307,7 @@ set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --n
 bindsym $mod+Shift+n exec $i3-wm.program.files
 
 ## Launch // Notification Viewer // <> n ##
-set_from_resource $i3-wm.program.notification_ui i3-wm.program.notification_ui /usr/share/rofication/rofication-gui.py
+set_from_resource $i3-wm.program.notification_ui i3-wm.program.notification_ui /usr/bin/rofication-gui
 bindsym $mod+n exec $i3-wm.program.notification_ui
 
 ###############################################################################
@@ -505,7 +505,7 @@ set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/
 exec --no-startup-id $i3-wm.program.compositor
 
 # Start Rofication for notifications
-set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/share/rofication/rofication-daemon.py
+set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon
 exec --no-startup-id $i3-wm.program.notifications
 
 # Launch first time user experience script
