@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.4.10) eoan; urgency=medium
+
+  * Change screen lock command for 20.04 compat. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 18 Apr 2020 20:04:21 -0700
+
 regolith-i3-gaps-config (2.4.9) eoan; urgency=medium
 
   * Update rofication paths based on @farsil's refactor of rofication. 
