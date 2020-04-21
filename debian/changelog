@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.4.11-1) eoan; urgency=medium
+
+  * Fix xres mapping for $i3-wm.gaps.focus_follows_mouse. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 20 Apr 2020 18:53:01 -0700
+
 regolith-i3-gaps-config (2.4.10) eoan; urgency=medium
 
   * Change screen lock command for 20.04 compat. 

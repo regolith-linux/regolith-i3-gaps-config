@@ -397,7 +397,7 @@ popup_during_fullscreen $i3-wm.gaps.popup_during_fullscreen
 
 # window focus follows your mouse movements as the mouse crosses window borders
 set_from_resource $i3-wm.gaps.focus_follows_mouse i3-wm.gaps.focus_follows_mouse no
-focus_follows_mouse no
+focus_follows_mouse $i3-wm.gaps.focus_follows_mouse
 
 ###############################################################################
 # i3 Colors and Fonts
