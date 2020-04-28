@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.4.12-1) focal; urgency=medium
+
+  * Fix fallback theme reference to last versions default Look. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 27 Apr 2020 21:58:42 -0700
+
 regolith-i3-gaps-config (2.4.11-1) eoan; urgency=medium
 
   * Fix xres mapping for $i3-wm.gaps.focus_follows_mouse. 
