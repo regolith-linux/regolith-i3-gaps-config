@@ -1,3 +1,9 @@
+regolith-i3-gaps-config (2.4.13-1) focal; urgency=medium
+
+  * Version bump to appease package builder.  No change from previous version. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 03 May 2020 20:37:41 -0700
+
 regolith-i3-gaps-config (2.4.12-1) focal; urgency=medium
 
   * Fix fallback theme reference to last versions default Look. 
