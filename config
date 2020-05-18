@@ -240,7 +240,10 @@ bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace num
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-hide_edge_borders smart
+# Hiding borders adjacent to the screen edges.
+# The "smart" setting hides borders on workspaces with only one window visible.
+set_from_resource $i3-wm.hide.edge.borders i3-wm.hide.edge.borders smart
+hide_edge_borders $i3-wm.hide.edge.borders
 
 ###############################################################################
 # Session Management
