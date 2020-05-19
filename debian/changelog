@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.4.14-1) bionic; urgency=medium
+
+  * Take smart-gaps fix from @winder.
+  * Comment cleanup. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 18 May 2020 19:56:43 -0700
+
 regolith-i3-gaps-config (2.4.13-1) focal; urgency=medium
 
   * Version bump to appease package builder.  No change from previous version. 
