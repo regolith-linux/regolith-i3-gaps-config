@@ -2,20 +2,20 @@
 # i3-gaps config file for the Regolith Desktop Environment
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
-# 
+#
 ###############################################################################
 #
-# In this config file many values are taken from Xresources with the directive 
+# In this config file many values are taken from Xresources with the directive
 # set_from_resource:
 #
 # set_from_resource <i3 variable name> <Xresources key> <default value>
-# 
-# This configuration file utilizes Xresource variables to change configuration 
+#
+# This configuration file utilizes Xresource variables to change configuration
 # without having to make a copy of this config file.
 # The benefit to not copying this file is easier upgrades in the future.
-# To update a value in this config without making a copy, update the Xresource 
+# To update a value in this config without making a copy, update the Xresource
 # value in the file ~/.config/regolith/Xresources.
-# 
+#
 # For example, to change the bar position to the top of the screen this is the
 # i3 config entry in this file:
 # set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
@@ -23,7 +23,7 @@
 # So add this line to ~/.config/regolith/Xresources to change it's value:
 # i3-wm.bar.position: top
 #
-# Reload i3 after making Xresource changes.  Learn more at 
+# Reload i3 after making Xresource changes.  Learn more at
 # https://regolith-linux.org/docs/howto/override-xres/
 #
 ###############################################################################
@@ -216,7 +216,7 @@ bindsym $mod+Shift+Ctrl+9 move container to workspace number $ws19
 
 # move focused container to workspace, move to workspace
 ## Modify // Carry Window to Workspace 1 - 10// <><Alt> 0..9 ##
-bindsym $mod+$alt+1 move container to workspace number $ws1; workspace number $ws1  
+bindsym $mod+$alt+1 move container to workspace number $ws1; workspace number $ws1
 bindsym $mod+$alt+2 move container to workspace number $ws2; workspace number $ws2
 bindsym $mod+$alt+3 move container to workspace number $ws3; workspace number $ws3
 bindsym $mod+$alt+4 move container to workspace number $ws4; workspace number $ws4
@@ -319,7 +319,7 @@ bindsym $mod+n exec $i3-wm.program.notification_ui
 
 # i3-snapshot for load/save current layout
 ## Modify // Save Window Layout // <> , ##
-bindsym $mod+comma  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot 
+bindsym $mod+comma  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot
 ## Modify // Load Window Layout // <> . ##
 bindsym $mod+period exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot
 
@@ -367,7 +367,7 @@ mode "Resize Mode" {
         bindsym Shift+minus gaps inner current minus 12
         bindsym Shift+plus gaps inner current plus 12
 
-        ## Resize // Exit Resize Mode // Escape or Enter ## 
+        ## Resize // Exit Resize Mode // Escape or Enter ##
         bindsym Return mode "default"
         bindsym Escape mode "default"
         bindsym $mod+r mode "default"
@@ -516,7 +516,7 @@ set_from_resource $i3-wm.program.ftui i3-wm.program.ftui /usr/bin/regolith-ftue
 exec --no-startup-id $i3-wm.program.ftui
 
 # Hide the mouse pointer if unused for a duration
-set_from_resource $i3-wm.program.unclutter i3-wm.program.unclutter /usr/bin/regolith-ftue /usr/bin/unclutter -b
+set_from_resource $i3-wm.program.unclutter i3-wm.program.unclutter /usr/bin/unclutter -b
 exec --no-startup-id $i3-wm.program.unclutter
 
 # User programs from Xresources
