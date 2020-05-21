@@ -5,19 +5,19 @@
 #
 ###############################################################################
 #
-# In this config file, may values are taken from Xresources with the directive
+# In this config file many values are taken from Xresources with the directive
 # set_from_resource:
 #
 # set_from_resource <i3 variable name> <Xresources key> <default value>
 #
-# This configuration file utilizes Xresource variables to enable users to
-# change the configuration without having to make a copy of this config file.
-# The benefit to not copying this file is easier upgrading in the future.
+# This configuration file utilizes Xresource variables to change configuration
+# without having to make a copy of this config file.
+# The benefit to not copying this file is easier upgrades in the future.
 # To update a value in this config without making a copy, update the Xresource
 # value in the file ~/.config/regolith/Xresources.
 #
 # For example, to change the bar position to the top of the screen this is the
-# i3 config entry:
+# i3 config entry in this file:
 # set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
 #
 # So add this line to ~/.config/regolith/Xresources to change it's value:
@@ -28,7 +28,7 @@
 #
 ###############################################################################
 #
-# This file uses a machine-parsable format for comments. The schema:
+# This file uses a machine-parsable format for comments. The schema is:
 # ## <Category> // <Action> // <Keybinding> ##
 # Learn more at https://github.com/regolith-linux/remontoire
 #
@@ -126,7 +126,7 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws10
-## Navigate // Workspace 11 - 19 // <><Ctrl> 0..9 ##
+## Navigate // Workspace 11 - 19 // <><Ctrl> 1..9 ##
 bindsym $mod+Ctrl+1 workspace number $ws11
 bindsym $mod+Ctrl+2 workspace number $ws12
 bindsym $mod+Ctrl+3 workspace number $ws13
@@ -203,7 +203,7 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws10
-## Modify // Move Window to Workspace 11 - 19// <><Ctrl><Shift> 0..9 ##
+## Modify // Move Window to Workspace 11 - 19// <><Ctrl><Shift> 1..9 ##
 bindsym $mod+Shift+Ctrl+1 move container to workspace number $ws11
 bindsym $mod+Shift+Ctrl+2 move container to workspace number $ws12
 bindsym $mod+Shift+Ctrl+3 move container to workspace number $ws13
@@ -226,7 +226,7 @@ bindsym $mod+$alt+7 move container to workspace number $ws7; workspace number $w
 bindsym $mod+$alt+8 move container to workspace number $ws8; workspace number $ws8
 bindsym $mod+$alt+9 move container to workspace number $ws9; workspace number $ws9
 bindsym $mod+$alt+0 move container to workspace number $ws10; workspace number $ws10
-## Modify // Carry Window to Workspace 11 - 19 // <><Alt><Ctrl> 0..9 ##
+## Modify // Carry Window to Workspace 11 - 19 // <><Alt><Ctrl> 1..9 ##
 bindsym $mod+$alt+Ctrl+1 move container to workspace number $ws11; workspace number $ws11
 bindsym $mod+$alt+Ctrl+2 move container to workspace number $ws12; workspace number $ws12
 bindsym $mod+$alt+Ctrl+3 move container to workspace number $ws13; workspace number $ws13
@@ -240,7 +240,10 @@ bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace num
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
-hide_edge_borders smart
+# Hiding borders adjacent to the screen edges.
+# The "smart" setting hides borders on workspaces with only one window visible.
+set_from_resource $i3-wm.hide.edge.borders i3-wm.hide.edge.borders smart
+hide_edge_borders $i3-wm.hide.edge.borders
 
 ###############################################################################
 # Session Management
@@ -472,7 +475,7 @@ set_from_resource $i3-wm.bar.separator i3-wm.bar.separator " "
 set_from_resource $i3-wm.bar.trayoutput i3-wm.bar.trayoutput none
 set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbers yes
 
-# i3xrocks config file. Override this for custom status indicators on the bar.
+# i3xrocks config file. Override this for a custom status bar generator.
 set_from_resource $i3-wm.bar.status_command i3-wm.bar.status_command i3xrocks -u ~/.config/regolith/i3xrocks/conf.d -d /etc/regolith/i3xrocks/conf.d
 
 # The bar configuration
@@ -514,7 +517,7 @@ set_from_resource $i3-wm.program.ftui i3-wm.program.ftui /usr/bin/regolith-ftue
 exec --no-startup-id $i3-wm.program.ftui
 
 # Hide the mouse pointer if unused for a duration
-set_from_resource $i3-wm.program.unclutter i3-wm.program.unclutter /usr/bin/regolith-ftue /usr/bin/unclutter -b
+set_from_resource $i3-wm.program.unclutter i3-wm.program.unclutter /usr/bin/unclutter -b
 exec --no-startup-id $i3-wm.program.unclutter
 
 # User programs from Xresources
