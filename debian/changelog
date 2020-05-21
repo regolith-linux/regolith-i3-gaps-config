@@ -1,3 +1,137 @@
+regolith-i3-gaps-config (2.4.14-1) bionic; urgency=medium
+
+  * Take smart-gaps fix from @winder.
+  * Comment cleanup. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 18 May 2020 19:56:43 -0700
+
+regolith-i3-gaps-config (2.4.13-1) focal; urgency=medium
+
+  * Version bump to appease package builder.  No change from previous version. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 03 May 2020 20:37:41 -0700
+
+regolith-i3-gaps-config (2.4.12-1) focal; urgency=medium
+
+  * Fix fallback theme reference to last versions default Look. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 27 Apr 2020 21:58:42 -0700
+
+regolith-i3-gaps-config (2.4.11-1) eoan; urgency=medium
+
+  * Fix xres mapping for $i3-wm.gaps.focus_follows_mouse. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 20 Apr 2020 18:53:01 -0700
+
+regolith-i3-gaps-config (2.4.10) eoan; urgency=medium
+
+  * Change screen lock command for 20.04 compat. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 18 Apr 2020 20:04:21 -0700
+
+regolith-i3-gaps-config (2.4.9) eoan; urgency=medium
+
+  * Update rofication paths based on @farsil's refactor of rofication. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 15 Apr 2020 20:27:42 -0700
+
+regolith-i3-gaps-config (2.4.8) eoan; urgency=medium
+
+  * Comment cleanup. 
+  * Depend on xgd-utils for xdg-settings. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 06 Apr 2020 08:55:13 -0700
+
+regolith-i3-gaps-config (2.4.7) eoan; urgency=medium
+
+  * Cause Nautilus keybinding to always launch new window. From
+    https://www.youtube.com/watch?v=1gKfgRxKiis. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 05 Apr 2020 10:45:50 -0700
+
+regolith-i3-gaps-config (2.4.6) eoan; urgency=medium
+
+  * Add font dependency back in for remonotoire.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Thu, 02 Apr 2020 14:21:21 -0700
+
+regolith-i3-gaps-config (2.4.5) eoan; urgency=medium
+
+  * Fix versioning from previous version.
+  * Minor tweaks to config file. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 01 Apr 2020 21:23:45 -0700
+
+regolith-i3-gaps-config (2.4.4ubuntu1) eoan; urgency=medium
+
+  * Add Xres overrides documentation as comments.
+  * Add bt keybinding back in.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 01 Apr 2020 09:48:07 -0700
+
+regolith-i3-gaps-config (2.4.4) eoan; urgency=medium
+
+  * Move to i3xrocks conf.d style configuration. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 29 Mar 2020 11:21:40 -0700
+
+regolith-i3-gaps-config (2.4.3) eoan; urgency=medium
+
+  * Remove hard dependency on regolith-rofication. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 22 Mar 2020 16:10:44 -0700
+
+regolith-i3-gaps-config (2.4.2) eoan; urgency=medium
+
+  * Fix modi URI for file search dialog. 
+  * Use windows fontawesome character for Super.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 22 Mar 2020 14:32:21 -0700
+
+regolith-i3-gaps-config (2.4.1) eoan; urgency=medium
+
+  * Integrate Rofi file search dialog into config. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 21 Mar 2020 21:47:05 -0700
+
+regolith-i3-gaps-config (2.4.0) eoan; urgency=medium
+
+  * Fix typo on i3 reload comment. 
+  * Add comment headers and group config by function.
+  * Allow for overriding more defaults via Xresources.
+  * Allow specifying custom programs to launch via Xresources.
+  * Cleanup Remontoire comment headers.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 08 Mar 2020 09:26:38 -0700
+
+regolith-i3-gaps-config (2.3.6-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Fix previous fix that didn't load i3 font from Xresources, pointed out by
+    @uselessthird. 
+  * Update fallback bar font to match default Cahuella theme.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Thu, 05 Mar 2020 21:36:40 -0800
+
+regolith-i3-gaps-config (2.3.5-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Fix incorrectly quoted defaults for new Xresource settings for i3 config
+    entries.
+  * Fix incorrect Xresource key for i3 font. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 04 Mar 2020 19:51:49 -0800
+
+regolith-i3-gaps-config (2.3.4-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Take @ekostem's suggested keybinding for workspace traversal.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 26 Feb 2020 07:43:44 -0800
+
+regolith-i3-gaps-config (2.3.3-1ubuntu1~ppa1) eoan; urgency=medium
+
+  * Use Remontoire compatible comments in i3 config. 
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Tue, 25 Feb 2020 20:07:13 -0800
+
 regolith-i3-gaps-config (2.3.2-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Defer to gnome setting for default browser over update-alternatives. 
