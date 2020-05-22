@@ -330,7 +330,7 @@ bindsym $mod+i bar mode toggle
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
 for_window [class="Gnome-control-center"] floating enable
-for_window [class="todo"] floating enable
+for_window [window_role="pop-up"] floating enable
 
 ###############################################################################
 # Window Resize and Gaps
