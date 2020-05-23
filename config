@@ -291,7 +291,7 @@ bindsym $mod+Shift+s exec $i3-wm.program.sleep
 
 ## Modify // Settings // <> c ##
 set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center
-bindsym $mod+c exec $i3-wm.program.settings
+bindsym $mod+c exec $i3-wm.program.settings --class=floating_window
 
 ## Modify // Display Settings // <> d ##
 set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center display
@@ -329,8 +329,7 @@ bindsym $mod+i bar mode toggle
 
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
-for_window [class="Gnome-control-center"] floating enable
-for_window [window_role="pop-up"] floating enable
+for_window [class="floating_window"] floating enable
 
 ###############################################################################
 # Window Resize and Gaps
