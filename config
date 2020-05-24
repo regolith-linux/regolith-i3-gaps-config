@@ -291,7 +291,7 @@ bindsym $mod+Shift+s exec $i3-wm.program.sleep
 
 ## Modify // Settings // <> c ##
 set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window
-bindsym $mod+g exec $i3-wm.program.settings
+bindsym $mod+c exec $i3-wm.program.settings
 
 ## Modify // Display Settings // <> d ##
 set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center --class=floating_window display
