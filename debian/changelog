@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.4.15-1) bionic; urgency=medium
+
+  [ Ken Gilmer ]
+  * Cleanup from lintian warnings.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 03 Jun 2020 08:23:48 -0700
+
 regolith-i3-gaps-config (2.4.14-1) bionic; urgency=medium
 
   * Take smart-gaps fix from @winder.
@@ -267,7 +274,7 @@ regolith-i3-gaps-config (2.0.0.1-1ubuntu1~ppa2) eoan; urgency=medium
 
  -- Ken Gilmer <kgilmer@gmail.com>  Fri, 08 Nov 2019 07:24:45 -0800
 
- regolith-i3-gaps-config (1.18.20-1ubuntu1~ppa1) eoan; urgency=medium
+regolith-i3-gaps-config (1.18.20-1ubuntu1~ppa1) eoan; urgency=medium
 
   * Remove xeventbind script to update wallpaper, not needed in Eoan. 
 
