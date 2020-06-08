@@ -68,6 +68,22 @@ set_from_resource $ws18 i3-wm.workspace.18.name "18"
 set_from_resource $ws19 i3-wm.workspace.19.name "19"
 
 ###############################################################################
+# Workspace Keys
+# These are the keys which will be used while binding workspace switching
+###############################################################################
+
+set_from_resource $ws1_key  i3-wm.workspace.01.key 1
+set_from_resource $ws2_key  i3-wm.workspace.02.key 2
+set_from_resource $ws3_key  i3-wm.workspace.03.key 3
+set_from_resource $ws4_key  i3-wm.workspace.04.key 4
+set_from_resource $ws5_key  i3-wm.workspace.05.key 5
+set_from_resource $ws6_key  i3-wm.workspace.06.key 6
+set_from_resource $ws7_key  i3-wm.workspace.07.key 7
+set_from_resource $ws8_key  i3-wm.workspace.08.key 8
+set_from_resource $ws9_key  i3-wm.workspace.09.key 9
+set_from_resource $ws10_key i3-wm.workspace.10.key 0
+
+###############################################################################
 # Launcher dialogs
 ###############################################################################
 
@@ -116,26 +132,26 @@ bindsym $mod+k focus up
 bindsym $mod+l focus right
 
 ## Navigate // Workspaces 1-10 // <> 0..9 ##
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
+bindsym $mod+$ws1_key workspace number $ws1
+bindsym $mod+$ws2_key workspace number $ws2
+bindsym $mod+$ws3_key workspace number $ws3
+bindsym $mod+$ws4_key workspace number $ws4
+bindsym $mod+$ws5_key workspace number $ws5
+bindsym $mod+$ws6_key workspace number $ws6
+bindsym $mod+$ws7_key workspace number $ws7
+bindsym $mod+$ws8_key workspace number $ws8
+bindsym $mod+$ws9_key workspace number $ws9
+bindsym $mod+$ws10_key workspace number $ws10
 ## Navigate // Workspace 11 - 19 // <><Ctrl> 1..9 ##
-bindsym $mod+Ctrl+1 workspace number $ws11
-bindsym $mod+Ctrl+2 workspace number $ws12
-bindsym $mod+Ctrl+3 workspace number $ws13
-bindsym $mod+Ctrl+4 workspace number $ws14
-bindsym $mod+Ctrl+5 workspace number $ws15
-bindsym $mod+Ctrl+6 workspace number $ws16
-bindsym $mod+Ctrl+7 workspace number $ws17
-bindsym $mod+Ctrl+8 workspace number $ws18
-bindsym $mod+Ctrl+9 workspace number $ws19
+bindsym $mod+Ctrl+$ws1_key workspace number $ws11
+bindsym $mod+Ctrl+$ws2_key workspace number $ws12
+bindsym $mod+Ctrl+$ws3_key workspace number $ws13
+bindsym $mod+Ctrl+$ws4_key workspace number $ws14
+bindsym $mod+Ctrl+$ws5_key workspace number $ws15
+bindsym $mod+Ctrl+$ws6_key workspace number $ws16
+bindsym $mod+Ctrl+$ws7_key workspace number $ws17
+bindsym $mod+Ctrl+$ws8_key workspace number $ws18
+bindsym $mod+Ctrl+$ws9_key workspace number $ws19
 
 ## Navigate // Next Workspace // <> Tab ##
 bindsym $mod+Tab workspace next
@@ -193,49 +209,49 @@ bindsym $mod+Shift+t focus mode_toggle
 bindsym $mod+t layout toggle tabbed splith splitv
 
 ## Modify // Move Window to Workspace 1 - 10 // <><Shift> 0..9 ##
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
+bindsym $mod+Shift+$ws1_key move container to workspace number $ws1
+bindsym $mod+Shift+$ws2_key move container to workspace number $ws2
+bindsym $mod+Shift+$ws3_key move container to workspace number $ws3
+bindsym $mod+Shift+$ws4_key move container to workspace number $ws4
+bindsym $mod+Shift+$ws5_key move container to workspace number $ws5
+bindsym $mod+Shift+$ws6_key move container to workspace number $ws6
+bindsym $mod+Shift+$ws7_key move container to workspace number $ws7
+bindsym $mod+Shift+$ws8_key move container to workspace number $ws8
+bindsym $mod+Shift+$ws9_key move container to workspace number $ws9
+bindsym $mod+Shift+$ws10_key move container to workspace number $ws10
 ## Modify // Move Window to Workspace 11 - 19// <><Ctrl><Shift> 1..9 ##
-bindsym $mod+Shift+Ctrl+1 move container to workspace number $ws11
-bindsym $mod+Shift+Ctrl+2 move container to workspace number $ws12
-bindsym $mod+Shift+Ctrl+3 move container to workspace number $ws13
-bindsym $mod+Shift+Ctrl+4 move container to workspace number $ws14
-bindsym $mod+Shift+Ctrl+5 move container to workspace number $ws15
-bindsym $mod+Shift+Ctrl+6 move container to workspace number $ws16
-bindsym $mod+Shift+Ctrl+7 move container to workspace number $ws17
-bindsym $mod+Shift+Ctrl+8 move container to workspace number $ws18
-bindsym $mod+Shift+Ctrl+9 move container to workspace number $ws19
+bindsym $mod+Shift+Ctrl+$ws1_key move container to workspace number $ws11
+bindsym $mod+Shift+Ctrl+$ws2_key move container to workspace number $ws12
+bindsym $mod+Shift+Ctrl+$ws3_key move container to workspace number $ws13
+bindsym $mod+Shift+Ctrl+$ws4_key move container to workspace number $ws14
+bindsym $mod+Shift+Ctrl+$ws5_key move container to workspace number $ws15
+bindsym $mod+Shift+Ctrl+$ws6_key move container to workspace number $ws16
+bindsym $mod+Shift+Ctrl+$ws7_key move container to workspace number $ws17
+bindsym $mod+Shift+Ctrl+$ws8_key move container to workspace number $ws18
+bindsym $mod+Shift+Ctrl+$ws9_key move container to workspace number $ws19
 
 # move focused container to workspace, move to workspace
 ## Modify // Carry Window to Workspace 1 - 10// <><Alt> 0..9 ##
-bindsym $mod+$alt+1 move container to workspace number $ws1; workspace number $ws1
-bindsym $mod+$alt+2 move container to workspace number $ws2; workspace number $ws2
-bindsym $mod+$alt+3 move container to workspace number $ws3; workspace number $ws3
-bindsym $mod+$alt+4 move container to workspace number $ws4; workspace number $ws4
-bindsym $mod+$alt+5 move container to workspace number $ws5; workspace number $ws5
-bindsym $mod+$alt+6 move container to workspace number $ws6; workspace number $ws6
-bindsym $mod+$alt+7 move container to workspace number $ws7; workspace number $ws7
-bindsym $mod+$alt+8 move container to workspace number $ws8; workspace number $ws8
-bindsym $mod+$alt+9 move container to workspace number $ws9; workspace number $ws9
-bindsym $mod+$alt+0 move container to workspace number $ws10; workspace number $ws10
+bindsym $mod+$alt+$ws1_key move container to workspace number $ws1; workspace number $ws1
+bindsym $mod+$alt+$ws2_key move container to workspace number $ws2; workspace number $ws2
+bindsym $mod+$alt+$ws3_key move container to workspace number $ws3; workspace number $ws3
+bindsym $mod+$alt+$ws4_key move container to workspace number $ws4; workspace number $ws4
+bindsym $mod+$alt+$ws5_key move container to workspace number $ws5; workspace number $ws5
+bindsym $mod+$alt+$ws6_key move container to workspace number $ws6; workspace number $ws6
+bindsym $mod+$alt+$ws7_key move container to workspace number $ws7; workspace number $ws7
+bindsym $mod+$alt+$ws8_key move container to workspace number $ws8; workspace number $ws8
+bindsym $mod+$alt+$ws9_key move container to workspace number $ws9; workspace number $ws9
+bindsym $mod+$alt+$ws10_key move container to workspace number $ws10; workspace number $ws10
 ## Modify // Carry Window to Workspace 11 - 19 // <><Alt><Ctrl> 1..9 ##
-bindsym $mod+$alt+Ctrl+1 move container to workspace number $ws11; workspace number $ws11
-bindsym $mod+$alt+Ctrl+2 move container to workspace number $ws12; workspace number $ws12
-bindsym $mod+$alt+Ctrl+3 move container to workspace number $ws13; workspace number $ws13
-bindsym $mod+$alt+Ctrl+4 move container to workspace number $ws14; workspace number $ws14
-bindsym $mod+$alt+Ctrl+5 move container to workspace number $ws15; workspace number $ws15
-bindsym $mod+$alt+Ctrl+6 move container to workspace number $ws16; workspace number $ws16
-bindsym $mod+$alt+Ctrl+7 move container to workspace number $ws17; workspace number $ws17
-bindsym $mod+$alt+Ctrl+8 move container to workspace number $ws18; workspace number $ws18
-bindsym $mod+$alt+Ctrl+9 move container to workspace number $ws19; workspace number $ws19
+bindsym $mod+$alt+Ctrl+$ws1_key move container to workspace number $ws11; workspace number $ws11
+bindsym $mod+$alt+Ctrl+$ws2_key move container to workspace number $ws12; workspace number $ws12
+bindsym $mod+$alt+Ctrl+$ws3_key move container to workspace number $ws13; workspace number $ws13
+bindsym $mod+$alt+Ctrl+$ws4_key move container to workspace number $ws14; workspace number $ws14
+bindsym $mod+$alt+Ctrl+$ws5_key move container to workspace number $ws15; workspace number $ws15
+bindsym $mod+$alt+Ctrl+$ws6_key move container to workspace number $ws16; workspace number $ws16
+bindsym $mod+$alt+Ctrl+$ws7_key move container to workspace number $ws17; workspace number $ws17
+bindsym $mod+$alt+Ctrl+$ws8_key move container to workspace number $ws18; workspace number $ws18
+bindsym $mod+$alt+Ctrl+$ws9_key move container to workspace number $ws19; workspace number $ws19
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
