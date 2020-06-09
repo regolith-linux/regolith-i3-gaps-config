@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.4.16-1) bionic; urgency=medium
+
+  [ ukaszg ]
+  * configurable workspace keys (#17)
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Tue, 09 Jun 2020 08:35:21 -0700
+
 regolith-i3-gaps-config (2.4.15-1) bionic; urgency=medium
 
   [ Ken Gilmer ]
