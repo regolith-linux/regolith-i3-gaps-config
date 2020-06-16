@@ -119,6 +119,12 @@ bindsym $mod+$alt+space exec $i3-wm.program.file_search
 # Window and Workspace Navigation
 ###############################################################################
 
+## Navigate // Relative Parent // <> a ##/
+bindsym $mod+a focus parent
+
+## Navigate // Relative Child // <> z ##/
+bindsym $mod+z focus child
+
 ## Navigate // Relative Window // <> ↑ ↓ ← → ##
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -190,7 +196,13 @@ bindsym $mod+Ctrl+Shift+Down move workspace to output down
 bindsym $mod+Ctrl+Shift+Up move workspace to output up
 bindsym $mod+Ctrl+Shift+Right move workspace to output right
 
-## Modify // Next Window Orientation // <> Backspace ##
+## Modify // Vertical Window Orientation // <> v ##
+bindsym $mod+v split vertical
+
+## Modify // Horizontal Window Orientation // <> g ##
+bindsym $mod+g split horizontal
+
+## Modify // Toggle Window Orientation // <> Backspace ##
 bindsym $mod+BackSpace split toggle
 
 ## Modify // Window Fullscreen Toggle // <> f ##
