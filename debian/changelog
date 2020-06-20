@@ -1,3 +1,13 @@
+regolith-i3-gaps-config (2.4.18-1) bionic; urgency=medium
+
+  [ Will Winder ]
+  * Add missing keybind for moving the workspace with hjkl. (#19)
+
+  [ Jordan Cohen ]
+  * shortcuts for explicit window orientation and hierarchical focusing (#18)
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 20 Jun 2020 16:22:37 -0700
+
 regolith-i3-gaps-config (2.4.17-1) bionic; urgency=medium
 
   [ Markus Bertheau ]
