@@ -1,4 +1,4 @@
-regolith-i3-gaps-config (2.5.19-1) bionic; urgency=medium
+regolith-i3-gaps-config (2.5.0-1) bionic; urgency=medium
 
   [ Ken Gilmer ]
   * Add keybindings for 'next free workspace' feature.
