@@ -1,3 +1,13 @@
+regolith-i3-gaps-config (2.5.1-1) bionic; urgency=medium
+
+  [ Moritz Heiber ]
+  * Set tray output to primary by default (#24)
+
+  [ Ken Gilmer ]
+  * Allow the bar mode (dock|hide|invisible) to be specified by xres overrides.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 30 Aug 2020 11:15:57 -0700
+
 regolith-i3-gaps-config (2.5.0-1) bionic; urgency=medium
 
   [ Ken Gilmer ]
