@@ -35,12 +35,14 @@
 ###############################################################################
 
 ###############################################################################
-# Meta Key Mappings
-# Alt key is Mod1, and Windows key is Mod4
+# Key Mappings
 ###############################################################################
 
+# Meta Key - Alt key is Mod1, and Windows key is Mod4
 set_from_resource $mod  i3-wm.mod Mod4
 set_from_resource $alt  i3-wm.alt Mod1
+ 
+set_from_resource $i3-wm.binding. i3-wm.binding. 
 
 ###############################################################################
 # Workspace Names
@@ -88,42 +90,51 @@ set_from_resource $ws10_key i3-wm.workspace.10.key 0
 ###############################################################################
 
 ## Launch // Terminal // <> Enter ##
-bindsym $mod+Return exec /usr/bin/x-terminal-emulator
+set_from_resource $i3-wm.binding.terminal i3-wm.binding.terminal Return
+bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator
 
 ## Launch // Browser // <><Shift> Enter ##
-bindsym $mod+Shift+Return exec gtk-launch $(xdg-settings get default-web-browser)
+set_from_resource $i3-wm.binding.browser i3-wm.binding.browser Shift+Return
+bindsym $mod+$i3-wm.binding.browser exec gtk-launch $(xdg-settings get default-web-browser)
 
 set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/lascaille/rofi.rasi
 
 ## Launch // Application // <> Space ##
+set_from_resource $i3-wm.binding.launcher.app i3-wm.binding.launcher.app space
 set_from_resource $i3-wm.program.launcher.app i3-wm.program.launcher.app rofi -show drun -theme $rofiTheme
-bindsym $mod+space exec $i3-wm.program.launcher.app
+bindsym $mod+$i3-wm.binding.launcher.app exec $i3-wm.program.launcher.app
 
 ## Launch // Command // <><Shift> Space ##
+set_from_resource $i3-wm.binding.launcher.cmd i3-wm.binding.launcher.cmd Shift+space
 set_from_resource $i3-wm.program.launcher.cmd i3-wm.program.launcher.cmd rofi -show run -theme $rofiTheme
-bindsym $mod+Shift+space exec $i3-wm.program.launcher.cmd
+bindsym $mod+$i3-wm.binding.launcher.cmd exec $i3-wm.program.launcher.cmd
 
 ## Navigate // Window by Name // <><Ctrl> Space ##
+set_from_resource $i3-wm.binding.launcher.window i3-wm.binding.launcher.window Ctrl+space
 set_from_resource $i3-wm.program.launcher.window i3-wm.program.launcher.window rofi -show window -theme $rofiTheme
-bindsym $mod+Ctrl+space exec $i3-wm.program.launcher.window
+bindsym $mod+$i3-wm.binding.launcher.window exec $i3-wm.program.launcher.window
 
 ## Launch // This Dialog // <><Shift> ? ##
+set_from_resource $i3-wm.binding.help i3-wm.binding.help Shift+question
 set_from_resource $i3-wm.program.help i3-wm.program.help /usr/bin/remontoire-toggle
-bindsym $mod+Shift+question exec --no-startup-id $i3-wm.program.help
+bindsym $mod+$i3-wm.binding.help exec --no-startup-id $i3-wm.program.help
 
 ## Launch // File Search // <><Alt> Space ##
+set_from_resource $i3-wm.binding.file_search i3-wm.binding.file_search Mod1+space
 set_from_resource $i3-wm.program.file_search i3-wm.program.file_search rofi -show find -modi find:/usr/share/rofi/modi/finder.sh
-bindsym $mod+$alt+space exec $i3-wm.program.file_search
+bindsym $mod+$i3-wm.binding.file_search exec $i3-wm.program.file_search
 
 ###############################################################################
 # Window and Workspace Navigation
 ###############################################################################
 
 ## Navigate // Relative Parent // <> a ##/
-bindsym $mod+a focus parent
+set_from_resource $i3-wm.binding.focus_parent i3-wm.binding.focus_parent a
+bindsym $mod+$i3-wm.binding.focus_parent focus parent
 
 ## Navigate // Relative Child // <> z ##/
-bindsym $mod+z focus child
+set_from_resource $i3-wm.binding.focus_child i3-wm.binding.focus_child z
+bindsym $mod+$i3-wm.binding.focus_child focus child
 
 ## Navigate // Relative Window // <> ↑ ↓ ← → ##
 bindsym $mod+Left focus left
@@ -132,10 +143,14 @@ bindsym $mod+Up focus up
 bindsym $mod+Right focus right
 
 ## Navigate // Relative Window // <> k j h l ##
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+set_from_resource $i3-wm.binding.left i3-wm.binding.left h
+set_from_resource $i3-wm.binding.right i3-wm.binding.right l
+set_from_resource $i3-wm.binding.up i3-wm.binding.up k
+set_from_resource $i3-wm.binding.down i3-wm.binding.down j
+bindsym $mod+$i3-wm.binding.left focus left
+bindsym $mod+$i3-wm.binding.down focus down
+bindsym $mod+$i3-wm.binding.up focus up
+bindsym $mod+$i3-wm.binding.right focus right
 
 ## Navigate // Workspaces 1-10 // <> 0..9 ##
 bindsym $mod+$ws1_key workspace number $ws1
@@ -160,22 +175,28 @@ bindsym $mod+Ctrl+$ws8_key workspace number $ws18
 bindsym $mod+Ctrl+$ws9_key workspace number $ws19
 
 ## Navigate // Next Workspace // <> Tab ##
-bindsym $mod+Tab workspace next
+set_from_resource $i3-wm.binding.ws_next i3-wm.binding.ws_next Tab
+bindsym $mod+$i3-wm.binding.ws_next workspace next
 
 ## Navigate // Next Workspace // <><Alt> → ##
-bindsym $mod+$alt+Right workspace next
+set_from_resource $i3-wm.binding.ws_next2 i3-wm.binding.ws_next2 Mod1+Right
+bindsym $mod+$i3-wm.binding.ws_next2 workspace next
 
 ## Navigate // Previous Workspace // <><Shift> Tab ##
-bindsym $mod+Shift+Tab workspace prev
+set_from_resource $i3-wm.binding.ws_prev i3-wm.binding.ws_prev Shift+Tab 
+bindsym $mod+$i3-wm.binding.ws_prev workspace prev
 
 ## Navigate // Previous Workspace // <><Alt> ← ##
-bindsym $mod+$alt+Left workspace prev
+set_from_resource $i3-wm.binding.ws_prev2 i3-wm.binding.ws_prev2 Mod1+Left
+bindsym $mod+$i3-wm.binding.ws_prev2 workspace prev
 
 ## Navigate // Next Free Workspace // <> ` ##
-bindsym $mod+grave exec --no-startup-id /usr/share/i3xrocks/next-workspace --startnum 1
+set_from_resource $i3-wm.binding.next_free i3-wm.binding.next_free grave
+bindsym $mod+$i3-wm.binding.next_free exec --no-startup-id /usr/share/i3xrocks/next-workspace --startnum 1
 
 ## Navigate // Scratchpad // <><Ctrl> a ##
-bindsym $mod+Ctrl+a scratchpad show
+set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad Ctrl+a
+bindsym $mod+$i3-wm.binding.scratchpad scratchpad show
 
 ###############################################################################
 # Window and Workspace Configuration
@@ -188,10 +209,14 @@ bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
 ## Modify // Window Position // <><Shift> k j h l ##
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+set_from_resource $i3-wm.binding.move_left i3-wm.binding.move_left Shift+h
+set_from_resource $i3-wm.binding.move_right i3-wm.binding.move_right Shift+l
+set_from_resource $i3-wm.binding.move_up i3-wm.binding.move_up Shift+k
+set_from_resource $i3-wm.binding.move_down i3-wm.binding.move_down Shift+j
+bindsym $mod+$i3-wm.binding.move_left move left
+bindsym $mod+$i3-wm.binding.move_down move down
+bindsym $mod+$i3-wm.binding.move_up move up
+bindsym $mod+$i3-wm.binding.move_right move right
 
 ## Modify // Containing Workspace // <><Ctrl><Shift> ↑ ↓ ← → ##
 bindsym $mod+Ctrl+Shift+Left move workspace to output left
@@ -200,34 +225,46 @@ bindsym $mod+Ctrl+Shift+Up move workspace to output up
 bindsym $mod+Ctrl+Shift+Right move workspace to output right
 
 ## Modify // Containing Workspace // <><Ctrl><Shift> k j h l ##
-bindsym $mod+Ctrl+Shift+h move workspace to output left
-bindsym $mod+Ctrl+Shift+j move workspace to output down
-bindsym $mod+Ctrl+Shift+k move workspace to output up
-bindsym $mod+Ctrl+Shift+l move workspace to output right
+set_from_resource $i3-wm.binding.take_left i3-wm.binding.take_left Ctrl+Shift+h
+set_from_resource $i3-wm.binding.take_right i3-wm.binding.take_right Ctrl+Shift+l
+set_from_resource $i3-wm.binding.take_up i3-wm.binding.take_up Ctrl+Shift+k
+set_from_resource $i3-wm.binding.take_down i3-wm.binding.take_down Ctrl+Shift+j
+bindsym $mod+$i3-wm.binding.take_left move workspace to output left
+bindsym $mod+$i3-wm.binding.take_down move workspace to output down
+bindsym $mod+$i3-wm.binding.take_up move workspace to output up
+bindsym $mod+$i3-wm.binding.take_right move workspace to output right
 
 ## Modify // Vertical Window Orientation // <> v ##
-bindsym $mod+v split vertical
+set_from_resource $i3-wm.binding.split_v i3-wm.binding.split_v v
+bindsym $mod+$i3-wm.binding.split_v split vertical
 
 ## Modify // Horizontal Window Orientation // <> g ##
-bindsym $mod+g split horizontal
+set_from_resource $i3-wm.binding.split_h i3-wm.binding.split_h g
+bindsym $mod+$i3-wm.binding.split_h split horizontal
 
 ## Modify // Toggle Window Orientation // <> Backspace ##
-bindsym $mod+BackSpace split toggle
+set_from_resource $i3-wm.binding.orientation_toggle i3-wm.binding.orientation_toggle BackSpace
+bindsym $mod+$i3-wm.binding.orientation_toggle split toggle
 
 ## Modify // Window Fullscreen Toggle // <> f ##
-bindsym $mod+f fullscreen toggle
+set_from_resource $i3-wm.binding.fullscreen_toggle i3-wm.binding.fullscreen_toggle f 
+bindsym $mod+$i3-wm.binding.fullscreen_toggle fullscreen toggle
 
 ## Modify // Window Floating Toggle // <><Shift> f ##
-bindsym $mod+Shift+f floating toggle
+set_from_resource $i3-wm.binding.float_toggle i3-wm.binding.float_toggle Shift+f
+bindsym $mod+Shift+$i3-wm.binding.float_toggle floating toggle
 
 ## Modify // Move to Scratchpad // <><Ctrl> m ##
-bindsym $mod+Ctrl+m move to scratchpad
+set_from_resource $i3-wm.binding.move_scratchpad i3-wm.binding.move_scratchpad Ctrl+m
+bindsym $mod+$i3-wm.binding.move_scratchpad move to scratchpad
 
 ## Modify // Tile/Float Focus Toggle // <><Shift> t ##
-bindsym $mod+Shift+t focus mode_toggle
+set_from_resource $i3-wm.binding.focus_toggle i3-wm.binding.focus_toggle Shift+t
+bindsym $mod+$i3-wm.binding.focus_toggle focus mode_toggle
 
 ## Modify // Window Layout Mode // <> t ##
-bindsym $mod+t layout toggle tabbed splith splitv
+set_from_resource $i3-wm.binding.layout_mode i3-wm.binding.layout_mode t
+bindsym $mod+$i3-wm.binding.layout_mode layout toggle tabbed splith splitv
 
 ## Modify // Move Window to Workspace 1 - 10 // <><Shift> 0..9 ##
 bindsym $mod+Shift+$ws1_key move container to workspace number $ws1
@@ -275,7 +312,8 @@ bindsym $mod+$alt+Ctrl+$ws8_key move container to workspace number $ws18; worksp
 bindsym $mod+$alt+Ctrl+$ws9_key move container to workspace number $ws19; workspace number $ws19
 
 ## Modify // Carry Window to Next Free Workspace // <><Shift> ` ##
-bindsym $mod+$alt+grave exec --no-startup-id /usr/share/i3xrocks/next-workspace --startnum 1 --move-window-and-follow
+set_from_resource $i3-wm.binding.take_next_free i3-wm.binding.take_next_free Mod1+grave
+bindsym $mod+$i3-wm.binding.take_next_free exec --no-startup-id /usr/share/i3xrocks/next-workspace --startnum 1 --move-window-and-follow
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -290,68 +328,84 @@ hide_edge_borders $i3-wm.hide.edge.borders
 ###############################################################################
 
 ## Session // Exit App // <><Shift> q ##
-bindsym $mod+Shift+q [con_id="__focused__"] kill
+set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app Shift+q
+bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
 ## Session // Terminate App // <><Alt> q ##
-bindsym $mod+$alt+q [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
+set_from_resource $i3-wm.binding.kill_app i3-wm.binding.kill_app Mod1+q
+bindsym $mod+$i3-wm.binding.kill_app [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
 
 ## Session // Reload i3 Config // <><Shift> c ##
-bindsym $mod+Shift+c reload
+set_from_resource $i3-wm.binding.reload i3-wm.binding.reload Shift+c
+bindsym $mod+$i3-wm.binding.reload reload
 
 ## Session // Refresh Session // <><Shift> r ##
+set_from_resource $i3-wm.binding.refresh i3-wm.binding.refresh Shift+r
 set_from_resource $i3-wm.program.refresh_ui i3-wm.program.refresh_ui /usr/bin/regolith-look refresh
-bindsym $mod+Shift+r exec --no-startup-id $i3-wm.program.refresh_ui
+bindsym $mod+$i3-wm.binding.refresh exec --no-startup-id $i3-wm.program.refresh_ui
 
 ## Session // Restart i3 // <><Ctrl> r ##
-bindsym $mod+Ctrl+r restart
+set_from_resource $i3-wm.binding.restart i3-wm.binding.restart Ctrl+r
+bindsym $mod+$i3-wm.binding.restart restart
 
 ## Session // Logout // <><Shift> e ##
+set_from_resource $i3-wm.binding.logout i3-wm.binding.logout Shift+e
 set_from_resource $i3-wm.program.logout i3-wm.program.logout /usr/bin/gnome-session-quit --logout
-bindsym $mod+Shift+e exec $i3-wm.program.logout
+bindsym $mod+$i3-wm.binding.logout exec $i3-wm.program.logout
 
 ## Session // Reboot // <><Shift> b ##
+set_from_resource $i3-wm.binding.reboot i3-wm.binding.reboot Shift+b
 set_from_resource $i3-wm.program.reboot i3-wm.program.reboot /usr/bin/gnome-session-quit --reboot
-bindsym $mod+Shift+b exec $i3-wm.program.reboot
+bindsym $mod+$i3-wm.binding.reboot exec $i3-wm.program.reboot
 
 ## Session // Power Down // <><Shift> p ##
+set_from_resource $i3-wm.binding.shutdown i3-wm.binding.shutdown Shift+p
 set_from_resource $i3-wm.program.shutdown i3-wm.program.shutdown /usr/bin/gnome-session-quit --power-off
-bindsym $mod+Shift+p exec $i3-wm.program.shutdown
+bindsym $mod+$i3-wm.binding.shutdown exec $i3-wm.program.shutdown
 
 ## Session // Lock Screen // <> Escape ##
+set_from_resource $i3-wm.binding.lock i3-wm.binding.lock Escape 
 set_from_resource $i3-wm.program.lock i3-wm.program.lock dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
-bindsym $mod+Escape exec $i3-wm.program.lock
+bindsym $mod+$i3-wm.binding.lock exec $i3-wm.program.lock
 
 ## Session // Sleep // <><Shift> s ##
+set_from_resource $i3-wm.binding.sleep i3-wm.binding.sleep Shift+s
 set_from_resource $i3-wm.program.sleep i3-wm.program.sleep systemctl suspend
-bindsym $mod+Shift+s exec $i3-wm.program.sleep
+bindsym $mod+$i3-wm.binding.sleep exec $i3-wm.program.sleep
 
 ###############################################################################
 # System Management
 ###############################################################################
 
 ## Modify // Settings // <> c ##
+set_from_resource $i3-wm.binding.settings i3-wm.binding.settings c 
 set_from_resource $i3-wm.program.settings i3-wm.program.settings gnome-control-center --class=floating_window
-bindsym $mod+c exec $i3-wm.program.settings
+bindsym $mod+$i3-wm.binding.settings exec $i3-wm.program.settings
 
 ## Modify // Display Settings // <> d ##
+set_from_resource $i3-wm.binding.display i3-wm.binding.display d
 set_from_resource $i3-wm.program.display i3-wm.program.display gnome-control-center --class=floating_window display
-bindsym $mod+d exec $i3-wm.program.display
+bindsym $mod+$i3-wm.binding.display exec $i3-wm.program.display
 
 ## Modify // Wifi Settings // <> w ##
+set_from_resource $i3-wm.binding.wifi i3-wm.binding.wifi w
 set_from_resource $i3-wm.program.wifi i3-wm.program.wifi gnome-control-center --class=floating_window wifi
-bindsym $mod+w exec $i3-wm.program.wifi
+bindsym $mod+$i3-wm.binding.wifi exec $i3-wm.program.wifi
 
 ## Modify // Bluetooth Settings // <> b ##
+set_from_resource $i3-wm.binding.bluetooth i3-wm.binding.bluetooth b 
 set_from_resource $i3-wm.program.bluetooth i3-wm.program.bluetooth gnome-control-center --class=floating_window bluetooth
-bindsym $mod+b exec $i3-wm.program.bluetooth
+bindsym $mod+$i3-wm.binding.bluetooth exec $i3-wm.program.bluetooth
 
 ## Launch // File Browser // <><Shift> n ##
+set_from_resource $i3-wm.binding.files i3-wm.binding.files Shift+n
 set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --new-window
-bindsym $mod+Shift+n exec $i3-wm.program.files
+bindsym $mod+$i3-wm.binding.files exec $i3-wm.program.files
 
 ## Launch // Notification Viewer // <> n ##
+set_from_resource $i3-wm.binding.notification_ui i3-wm.binding.notification_ui n
 set_from_resource $i3-wm.program.notification_ui i3-wm.program.notification_ui /usr/bin/rofication-gui
-bindsym $mod+n exec $i3-wm.program.notification_ui
+bindsym $mod+$i3-wm.binding.notification_ui exec $i3-wm.program.notification_ui
 
 ###############################################################################
 # Workspace Management
@@ -359,13 +413,16 @@ bindsym $mod+n exec $i3-wm.program.notification_ui
 
 # i3-snapshot for load/save current layout
 ## Modify // Save Window Layout // <> , ##
-bindsym $mod+comma  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot
+set_from_resource $i3-wm.binding.save_layout i3-wm.binding.save_layout comma 
+bindsym $mod+$i3-wm.binding.save_layout  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot
 ## Modify // Load Window Layout // <> . ##
-bindsym $mod+period exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot
+set_from_resource $i3-wm.binding.load_layout i3-wm.binding.load_layout period
+bindsym $mod+$i3-wm.binding.load_layout exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot
 
 # Toggle bar visibility
 ## Modify // Toggle Bar // <> i ##
-bindsym $mod+i bar mode toggle
+set_from_resource $i3-wm.binding.bar_toggle i3-wm.binding.bar_toggle i
+bindsym $mod+$i3-wm.binding.bar_toggle bar mode toggle
 
 # Cause Settings app to float above tiled windows
 floating_maximum_size -1 x -1
@@ -377,6 +434,12 @@ workspace_auto_back_and_forth $i3-wm.workspace.auto_back_and_forth
 ###############################################################################
 # Window Resize and Gaps
 ###############################################################################
+
+set_from_resource $i3-wm.binding.inc_gaps i3-wm.binding.inc_gaps plus
+set_from_resource $i3-wm.binding.dec_gaps i3-wm.binding.dec_gaps minus
+
+set_from_resource $i3-wm.binding.inc_gaps_big i3-wm.binding.inc_gaps_big Shift+plus
+set_from_resource $i3-wm.binding.dec_gaps_big i3-wm.binding.dec_gaps_big Shift+minus
 
 ## Resize // Enter Resize Mode // <> r ##
 mode "Resize Mode" {
@@ -394,21 +457,21 @@ mode "Resize Mode" {
         bindsym Shift+Right resize grow width 12 px or 12 ppt
 
         ## Resize // Resize Window // k j h l ##
-        bindsym h resize shrink width 6 px or 6 ppt
-        bindsym k resize grow height 6 px or 6 ppt
-        bindsym j resize shrink height 6 px or 6 ppt
-        bindsym l resize grow width 6 px or 6 ppt
+        bindsym $i3-wm.binding.left resize shrink width 6 px or 6 ppt
+        bindsym $i3-wm.binding.up resize grow height 6 px or 6 ppt
+        bindsym $i3-wm.binding.down resize shrink height 6 px or 6 ppt
+        bindsym $i3-wm.binding.right resize grow width 6 px or 6 ppt
 
-        bindsym Shift+h resize shrink width 12 px or 12 ppt
-        bindsym Shift+k resize grow height 12 px or 12 ppt
-        bindsym Shift+j resize shrink height 12 px or 12 ppt
-        bindsym Shift+l resize grow width 12 px or 12 ppt
+        bindsym $i3-wm.binding.move_left resize shrink width 12 px or 12 ppt
+        bindsym $i3-wm.binding.move_up resize grow height 12 px or 12 ppt
+        bindsym $i3-wm.binding.move_down resize shrink height 12 px or 12 ppt
+        bindsym $i3-wm.binding.move_right resize grow width 12 px or 12 ppt
 
         ## Resize // Window Gaps // + - ##
-        bindsym minus gaps inner current minus 6
-        bindsym plus gaps inner current plus 6
-        bindsym Shift+minus gaps inner current minus 12
-        bindsym Shift+plus gaps inner current plus 12
+        bindsym $i3-wm.binding.dec_gaps gaps inner current minus 6
+        bindsym $i3-wm.binding.inc_gaps gaps inner current plus 6
+        bindsym $i3-wm.binding.dec_gaps_big gaps inner current minus 12
+        bindsym $i3-wm.binding.inc_gaps_big gaps inner current plus 12
 
         ## Resize // Exit Resize Mode // Escape or Enter ##
         bindsym Return mode "default"
