@@ -613,7 +613,7 @@ bar {
 
 # Start the installed regolith-compositor
 set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/regolith-compositor/init
-exec --no-startup-id $i3-wm.program.compositor
+exec_always --no-startup-id $i3-wm.program.compositor
 
 # Start Rofication for notifications
 set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon

@@ -1,3 +1,11 @@
+regolith-i3-gaps-config (2.6.0-1) bionic; urgency=medium
+
+  [ Ken Gilmer ]
+  * Based on idea from @Ukaszg, extract all keybindings to Xres keys for easy overriding without i3 file copy.  Fixes https://github.com/regolith-linux/regolith-i3-gaps-config/issues/25.
+  * Restart compositor upon i3 restart.  Part of fix for https://github.com/regolith-linux/regolith-desktop/issues/475.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 07 Sep 2020 13:50:45 -0700
+
 regolith-i3-gaps-config (2.5.1-1) bionic; urgency=medium
 
   [ Moritz Heiber ]
