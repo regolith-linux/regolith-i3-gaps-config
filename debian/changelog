@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.7.1-1) bionic; urgency=medium
+
+  [ Ken Gilmer ]
+  * Shorten look-selector to look for rofi menu.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 13 Sep 2020 18:55:56 -0700
+
 regolith-i3-gaps-config (2.7.0-1) bionic; urgency=medium
 
   [ Ken Gilmer ]

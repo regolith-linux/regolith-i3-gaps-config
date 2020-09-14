@@ -126,7 +126,7 @@ bindsym $mod+$i3-wm.binding.file_search exec $i3-wm.program.file_search
 
 ## Launch // Look Selector // <><Alt> l ##
 set_from_resource $i3-wm.binding.look_selector i3-wm.binding.look_selector Mod1+l
-set_from_resource $i3-wm.program.look_selector i3-wm.program.look_selector rofi -show look-selector -modi look-selector:/usr/share/rofi/modi/look-selector.sh
+set_from_resource $i3-wm.program.look_selector i3-wm.program.look_selector rofi -show look -modi look:/usr/share/rofi/modi/look-selector.sh
 bindsym $mod+$i3-wm.binding.look_selector exec $i3-wm.program.look_selector
 
 ###############################################################################
