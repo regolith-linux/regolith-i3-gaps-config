@@ -197,7 +197,7 @@ bindsym $mod+$i3-wm.binding.ws_prev2 workspace prev
 
 ## Navigate // Next Free Workspace // <> ` ##
 set_from_resource $i3-wm.binding.next_free i3-wm.binding.next_free grave
-bindsym $mod+$i3-wm.binding.next_free exec --no-startup-id /usr/share/i3xrocks/next-workspace --startnum 1
+bindsym $mod+$i3-wm.binding.next_free exec --no-startup-id /usr/share/i3xrocks/next-workspace
 
 ## Navigate // Scratchpad // <><Ctrl> a ##
 set_from_resource $i3-wm.binding.scratchpad i3-wm.binding.scratchpad Ctrl+a
