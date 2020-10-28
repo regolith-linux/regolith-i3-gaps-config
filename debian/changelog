@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.8.0-1) bionic; urgency=medium
+
+  [ Bence Ferdinandy ]
+  * adding bindings for next_on_output and prev_on_output (#29)
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 28 Oct 2020 08:33:53 -0700
+
 regolith-i3-gaps-config (2.7.2-1) bionic; urgency=medium
 
   [ Ken Gilmer ]
