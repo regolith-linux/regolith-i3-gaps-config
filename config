@@ -309,6 +309,10 @@ bindsym $mod+Shift+Ctrl+$ws7_key move container to workspace number $ws17
 bindsym $mod+Shift+Ctrl+$ws8_key move container to workspace number $ws18
 bindsym $mod+Shift+Ctrl+$ws9_key move container to workspace number $ws19
 
+## Modify // Move Window to Next Free Workspace // <><Shift> ` ##
+set_from_resource $i3-wm.binding.move_next_free i3-wm.binding.move_next_free Shift+grave
+bindsym $mod+$i3-wm.binding.move_next_free exec --no-startup-id /usr/share/i3xrocks/next-workspace  --move-window
+
 # move focused container to workspace, move to workspace
 ## Modify // Carry Window to Workspace 1 - 10// <><Alt> 0..9 ##
 bindsym $mod+$alt+$ws1_key move container to workspace number $ws1; workspace number $ws1
