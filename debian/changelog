@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.8.1-1) bionic; urgency=medium
+
+  [ Will Winder ]
+  * Fix 'Carry Window to Next Free' binding, remove trailing whitespace. (#31)
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 22 Nov 2020 19:52:17 -0800
+
 regolith-i3-gaps-config (2.8.0-1) bionic; urgency=medium
 
   [ Bence Ferdinandy ]
