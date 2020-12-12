@@ -9,19 +9,20 @@ Homepage: https://github.com/regolith-linux/regolith-i3-gaps-config
 Package: regolith-i3-gaps-config
 Architecture: any
 Depends: ${misc:Depends},
-  fonts-font-awesome,
   i3-gaps-wm,
+  xdg-utils,
+  xdotool
+Recommends:
+  i3-next-workspace,
   i3-snapshot,
   network-manager-gnome,
   regolith-compositor,
   regolith-ftue,
   regolith-rofi-config,
-  regolith-styles,
-  xdg-utils,
-  xdotool
+  regolith-styles  
 Conflicts: regolith-i3-wm
 Replaces: regolith-i3-wm
 Recommends: regolith-rofication
 Description: Regolith i3-gaps config file
- This is the i3 config file for the Regolith desktop environment. It 
+ This is the i3 config file for the Regolith desktop environment. It
  assumes that i3-gaps is running and that Xresources have been loaded.
