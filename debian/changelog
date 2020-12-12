@@ -1,4 +1,4 @@
-regolith-i3-gaps-config (2.8.2-1ubuntu1) UNRELEASED; urgency=medium
+regolith-i3-gaps-config (2.8.3-1) bionic; urgency=medium
 
   [ Ken Gilmer ]
   * Move some non-critical dependencies to Recommends.  Add recomments to i3-next-workspace.  Remove dep on fontawesome.
