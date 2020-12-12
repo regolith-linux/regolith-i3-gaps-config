@@ -18,11 +18,11 @@ Recommends:
   network-manager-gnome,
   regolith-compositor,
   regolith-ftue,
+  regolith-rofication,
   regolith-rofi-config,
-  regolith-styles  
+  regolith-styles
 Conflicts: regolith-i3-wm
 Replaces: regolith-i3-wm
-Recommends: regolith-rofication
 Description: Regolith i3-gaps config file
  This is the i3 config file for the Regolith desktop environment. It
  assumes that i3-gaps is running and that Xresources have been loaded.
