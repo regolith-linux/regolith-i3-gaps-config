@@ -120,14 +120,14 @@ set_from_resource $i3-wm.program.help i3-wm.program.help /usr/bin/remontoire-tog
 bindsym $mod+$i3-wm.binding.help exec --no-startup-id $i3-wm.program.help
 
 ## Launch // File Search // <><Alt> Space ##
-set_from_resource $i3-wm.binding.file_search i3-wm.binding.file_search Mod1+space
+set_from_resource $i3-wm.binding.file_search i3-wm.binding.file_search space
 set_from_resource $i3-wm.program.file_search i3-wm.program.file_search rofi -show find -modi find:/usr/share/rofi/modi/finder.sh
-bindsym $mod+$i3-wm.binding.file_search exec $i3-wm.program.file_search
+bindsym $mod+$alt+$i3-wm.binding.file_search exec $i3-wm.program.file_search
 
 ## Launch // Look Selector // <><Alt> l ##
-set_from_resource $i3-wm.binding.look_selector i3-wm.binding.look_selector Mod1+l
+set_from_resource $i3-wm.binding.look_selector i3-wm.binding.look_selector l
 set_from_resource $i3-wm.program.look_selector i3-wm.program.look_selector rofi -show look -modi look:/usr/share/rofi/modi/look-selector.sh
-bindsym $mod+$i3-wm.binding.look_selector exec $i3-wm.program.look_selector
+bindsym $mod+$alt+$i3-wm.binding.look_selector exec $i3-wm.program.look_selector
 
 ###############################################################################
 # Window and Workspace Navigation
@@ -184,8 +184,8 @@ set_from_resource $i3-wm.binding.ws_next i3-wm.binding.ws_next Tab
 bindsym $mod+$i3-wm.binding.ws_next workspace next
 
 ## Navigate // Next Workspace // <><Alt> → ##
-set_from_resource $i3-wm.binding.ws_next2 i3-wm.binding.ws_next2 Mod1+Right
-bindsym $mod+$i3-wm.binding.ws_next2 workspace next
+set_from_resource $i3-wm.binding.ws_next2 i3-wm.binding.ws_next2 Right
+bindsym $mod+$alt+$i3-wm.binding.ws_next2 workspace next
 
 ## Navigate // Next Workspace on Output // <><Ctrl> Tab ##
 set_from_resource $i3-wm.binding.ws_next_on_output i3-wm.binding.ws_next_on_output Ctrl+Tab
@@ -200,8 +200,8 @@ set_from_resource $i3-wm.binding.ws_prev i3-wm.binding.ws_prev Shift+Tab
 bindsym $mod+$i3-wm.binding.ws_prev workspace prev
 
 ## Navigate // Previous Workspace // <><Alt> ← ##
-set_from_resource $i3-wm.binding.ws_prev2 i3-wm.binding.ws_prev2 Mod1+Left
-bindsym $mod+$i3-wm.binding.ws_prev2 workspace prev
+set_from_resource $i3-wm.binding.ws_prev2 i3-wm.binding.ws_prev2 Left
+bindsym $mod+$alt+$i3-wm.binding.ws_prev2 workspace prev
 
 ## Navigate // Previous Workspace on Output // <><Ctrl><Shift> Tab ##
 set_from_resource $i3-wm.binding.ws_prev_on_output i3-wm.binding.ws_prev_on_output Ctrl+Shift+Tab
@@ -337,8 +337,8 @@ bindsym $mod+$alt+Ctrl+$ws8_key move container to workspace number $ws18; worksp
 bindsym $mod+$alt+Ctrl+$ws9_key move container to workspace number $ws19; workspace number $ws19
 
 ## Modify // Carry Window to Next Free Workspace // <><Alt> ` ##
-set_from_resource $i3-wm.binding.take_next_free i3-wm.binding.take_next_free Mod1+grave
-bindsym $mod+$i3-wm.binding.take_next_free exec --no-startup-id /usr/share/i3xrocks/next-workspace  --move-window-and-follow
+set_from_resource $i3-wm.binding.take_next_free i3-wm.binding.take_next_free grave
+bindsym $mod+$alt+$i3-wm.binding.take_next_free exec --no-startup-id /usr/share/i3xrocks/next-workspace  --move-window-and-follow
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -357,8 +357,8 @@ set_from_resource $i3-wm.binding.exit_app i3-wm.binding.exit_app Shift+q
 bindsym $mod+$i3-wm.binding.exit_app [con_id="__focused__"] kill
 
 ## Session // Terminate App // <><Alt> q ##
-set_from_resource $i3-wm.binding.kill_app i3-wm.binding.kill_app Mod1+q
-bindsym $mod+$i3-wm.binding.kill_app [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
+set_from_resource $i3-wm.binding.kill_app i3-wm.binding.kill_app q
+bindsym $mod+$alt+$i3-wm.binding.kill_app [con_id="__focused__"] exec --no-startup-id kill -9 $(xdotool getwindowfocus getwindowpid)
 
 ## Session // Reload i3 Config // <><Shift> c ##
 set_from_resource $i3-wm.binding.reload i3-wm.binding.reload Shift+c
