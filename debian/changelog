@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (2.8.5-1) focal; urgency=medium
+
+  [ Ken Gilmer ]
+  * Move some deps from desktop
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 09 Jan 2021 09:08:24 -0800
+
 regolith-i3-gaps-config (2.8.4-1) bionic; urgency=medium
 
   [ Ken Gilmer ]

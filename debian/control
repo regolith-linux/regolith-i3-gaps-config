@@ -10,17 +10,23 @@ Package: regolith-i3-gaps-config
 Architecture: any
 Depends: ${misc:Depends},
   i3-gaps-wm,
+  i3xrocks,
+  gnome-control-center,
+  gnome-settings-daemon,
   xdg-utils,
+  regolith-compositor-none | regolith-compositor,
   xdotool
 Recommends:
   i3-next-workspace,
   i3-snapshot,
   network-manager-gnome,
   regolith-compositor,
+  regolith-i3xrocks-config,
   regolith-ftue,
   regolith-rofication,
   regolith-rofi-config,
-  regolith-styles
+  regolith-styles,
+  rofi
 Conflicts: regolith-i3-wm
 Replaces: regolith-i3-wm
 Description: Regolith i3-gaps config file
