@@ -26,6 +26,7 @@ Recommends:
   regolith-rofication,
   regolith-rofi-config,
   regolith-styles,
+  regolith-unclutter-xfixes,
   rofi
 Conflicts: regolith-i3-wm
 Replaces: regolith-i3-wm

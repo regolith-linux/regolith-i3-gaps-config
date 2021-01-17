@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (3.0.0-1) bionic; urgency=medium
+
+  [ Ken Gilmer ]
+  * move unclutter dependency from session to i3-gaps-config, as that's where it's referenced
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 17 Jan 2021 08:43:09 -0800
+
 regolith-i3-gaps-config (2.8.5-1) focal; urgency=medium
 
   [ Ken Gilmer ]
