@@ -1,0 +1,12 @@
+###############################################################################
+#
+# This file uses a machine-parsable format for comments. The schema is:
+# ## <Category> // <Action> // <Keybinding> ##
+# Learn more at https://github.com/regolith-linux/remontoire
+#
+###############################################################################
+
+## Launch // This Dialog // <><Shift> ? ##
+set_from_resource $i3-wm.binding.help i3-wm.binding.help Shift+question
+set_from_resource $i3-wm.program.help i3-wm.program.help /usr/bin/remontoire-toggle
+bindsym $mod+$i3-wm.binding.help exec --no-startup-id $i3-wm.program.help

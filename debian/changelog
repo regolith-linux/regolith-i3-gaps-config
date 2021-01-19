@@ -1,3 +1,11 @@
+regolith-i3-gaps-config (3.0.1-1ubuntu1) bionic; urgency=medium
+
+  [ Ken Gilmer ]
+  * Vend i3-gaps Xresource file
+  * Decompose i3 config file into partials.  Move config file to baseline.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Mon, 18 Jan 2021 21:53:10 -0800
+
 regolith-i3-gaps-config (3.0.0-1) bionic; urgency=medium
 
   [ Ken Gilmer ]

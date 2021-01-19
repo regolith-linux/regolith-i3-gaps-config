@@ -1,0 +1,3 @@
+# Load nm-applet to provide auth dialogs for network access
+set_from_resource $i3-wm.program.nm-applet i3-wm.program.nm-applet /usr/bin/nm-applet
+exec --no-startup-id $i3-wm.program.nm-applet

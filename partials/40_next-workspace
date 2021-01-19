@@ -1,0 +1,3 @@
+## Modify // Carry Window to Next Free Workspace // <><Alt> ` ##
+set_from_resource $i3-wm.binding.take_next_free i3-wm.binding.take_next_free Mod1+grave
+bindsym $mod+$i3-wm.binding.take_next_free exec --no-startup-id /usr/bin/i3-next-workspace --move-window-and-follow

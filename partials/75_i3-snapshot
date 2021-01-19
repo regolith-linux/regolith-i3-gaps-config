@@ -1,0 +1,7 @@
+# i3-snapshot for load/save current layout
+## Modify // Save Window Layout // <> , ##
+set_from_resource $i3-wm.binding.save_layout i3-wm.binding.save_layout comma
+bindsym $mod+$i3-wm.binding.save_layout  exec /usr/bin/i3-snapshot -o > /tmp/i3-snapshot
+## Modify // Load Window Layout // <> . ##
+set_from_resource $i3-wm.binding.load_layout i3-wm.binding.load_layout period
+bindsym $mod+$i3-wm.binding.load_layout exec /usr/bin/i3-snapshot -c < /tmp/i3-snapshot

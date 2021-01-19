@@ -1,0 +1,3 @@
+# Launch first time user experience script
+set_from_resource $i3-wm.program.ftui i3-wm.program.ftui /usr/bin/regolith-ftue
+exec --no-startup-id $i3-wm.program.ftui

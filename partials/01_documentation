@@ -1,0 +1,27 @@
+###############################################################################
+# i3-gaps config file for the Regolith Desktop Environment
+#
+# Please see http://i3wm.org/docs/userguide.html for a complete reference!
+#
+###############################################################################
+#
+# In this config file many values are taken from Xresources with the directive
+# set_from_resource:
+#
+# set_from_resource <i3 variable name> <Xresources key> <default value>
+#
+# This configuration file utilizes Xresource variables to change configuration
+# without having to make a copy of this config file.
+# The benefit to not copying this file is easier upgrades in the future.
+# To update a value in this config without making a copy, update the Xresource
+# value in the file ~/.config/regolith/Xresources.
+#
+# For example, to change the bar position to the top of the screen this is the
+# i3 config entry in this file:
+# set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
+#
+# So add this line to ~/.config/regolith/Xresources to change it's value:
+# i3-wm.bar.position: top
+#
+# Reload i3 after making Xresource changes.  Learn more at
+# https://regolith-linux.org/docs/howto/override-xres/

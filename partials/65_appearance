@@ -1,0 +1,66 @@
+
+# Cause Settings app to float above tiled windows
+floating_maximum_size -1 x -1
+for_window [class="floating_window"] floating enable
+
+###############################################################################
+# i3 Colors and Fonts
+###############################################################################
+
+# Create variables from Xresources for i3's look.
+set_from_resource $focused.color.border i3-wm.client.focused.color.border "#002b36"
+set_from_resource $focused.color.background i3-wm.client.focused.color.background "#586e75"
+set_from_resource $focused.color.text i3-wm.client.focused.color.text "#fdf6e3"
+set_from_resource $focused.color.indicator i3-wm.client.focused.color.indicator "#268bd2"
+set_from_resource $focused.color.child_border i3-wm.client.focused.color.child_border
+
+set_from_resource $focused_inactive.color.border i3-wm.client.focused_inactive.color.border "#002b36"
+set_from_resource $focused_inactive.color.background i3-wm.client.focused_inactive.color.background "#073642"
+set_from_resource $focused_inactive.color.text i3-wm.client.focused_inactive.color.text "#839496"
+set_from_resource $focused_inactive.color.indicator i3-wm.client.focused_inactive.color.indicator "#073642"
+set_from_resource $focused_inactive.color.child_border i3-wm.client.focused_inactive.color.child_border
+
+set_from_resource $unfocused.color.border i3-wm.client.unfocused.color.border "#002b36"
+set_from_resource $unfocused.color.background i3-wm.client.unfocused.color.background "#073642"
+set_from_resource $unfocused.color.text i3-wm.client.unfocused.color.text "#839496"
+set_from_resource $unfocused.color.indicator i3-wm.client.unfocused.color.indicator "#073642"
+set_from_resource $unfocused.color.child_border i3-wm.client.unfocused.color.child_border
+
+set_from_resource $urgent.color.border i3-wm.client.urgent.color.border "#002b36"
+set_from_resource $urgent.color.background i3-wm.client.urgent.color.background "#dc322f"
+set_from_resource $urgent.color.text i3-wm.client.urgent.color.text "#fdf6e3"
+set_from_resource $urgent.color.indicator i3-wm.client.urgent.color.indicator "#002b36"
+set_from_resource $urgent.color.child_border i3-wm.client.urgent.color.child_border
+
+
+# Window Border color
+# class                 border                             background                         text                               indicator                          child_border
+client.focused          $focused.color.border              $focused.color.background          $focused.color.text                $focused.color.indicator           $focused.color.child_border
+client.focused_inactive $focused_inactive.color.border     $focused_inactive.color.background $focused_inactive.color.text       $focused_inactive.color.indicator  $focused_inactive.color.child_border
+client.unfocused        $unfocused.color.border            $unfocused.color.background        $unfocused.color.text              $unfocused.color.indicator         $unfocused.color.child_border
+client.urgent           $urgent.color.border               $urgent.color.background           $urgent.color.text                 $urgent.color.indicator            $urgent.color.child_border
+
+# Create variables from Xresources for i3bars's look.
+set_from_resource $i3-wm.bar.background.color i3-wm.bar.background.color "#002b36"
+set_from_resource $i3-wm.bar.statusline.color i3-wm.bar.statusline.color "#93a1a1"
+set_from_resource $i3-wm.bar.separator.color i3-wm.bar.separator.color "#268bd2"
+
+set_from_resource $i3-wm.bar.workspace.focused.border.color i3-wm.bar.workspace.focused.border.color "#073642"
+set_from_resource $i3-wm.bar.workspace.focused.background.color i3-wm.bar.workspace.focused.background.color "#073642"
+set_from_resource $i3-wm.bar.workspace.focused.text.color i3-wm.bar.workspace.focused.text.color "#eee8d5"
+
+set_from_resource $i3-wm.bar.workspace.active.border.color i3-wm.bar.workspace.active.border.color "#073642"
+set_from_resource $i3-wm.bar.workspace.active.background.color i3-wm.bar.workspace.active.background.color "#073642"
+set_from_resource $i3-wm.bar.workspace.active.text.color i3-wm.bar.workspace.active.text.color "#586e75"
+
+set_from_resource $i3-wm.bar.workspace.inactive.border.color i3-wm.bar.workspace.inactive.border.color "#002b36"
+set_from_resource $i3-wm.bar.workspace.inactive.background.color i3-wm.bar.workspace.inactive.background.color "#002b36"
+set_from_resource $i3-wm.bar.workspace.inactive.text.color i3-wm.bar.workspace.inactive.text.color "#586e75"
+
+set_from_resource $i3-wm.bar.workspace.urgent.border.color i3-wm.bar.workspace.urgent.border.color "#dc322f"
+set_from_resource $i3-wm.bar.workspace.urgent.background.color i3-wm.bar.workspace.urgent.background.color "#dc322f"
+set_from_resource $i3-wm.bar.workspace.urgent.text.color i3-wm.bar.workspace.urgent.text.color "#fdf6e3"
+
+# Sets i3 font for dialogs
+set_from_resource $i3-wm.font i3-wm.font pango:Source Code Pro Medium 13
+font $i3-wm.font

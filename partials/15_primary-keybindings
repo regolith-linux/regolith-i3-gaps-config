@@ -1,0 +1,12 @@
+###############################################################################
+# Launcher dialogs
+###############################################################################
+
+## Launch // Terminal // <> Enter ##
+set_from_resource $i3-wm.binding.terminal i3-wm.binding.terminal Return
+bindsym $mod+$i3-wm.binding.terminal exec /usr/bin/x-terminal-emulator
+
+## Launch // Browser // <><Shift> Enter ##
+set_from_resource $i3-wm.binding.browser i3-wm.binding.browser Shift+Return
+bindsym $mod+$i3-wm.binding.browser exec gtk-launch $(xdg-settings get default-web-browser)
+

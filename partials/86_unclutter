@@ -1,0 +1,3 @@
+# Hide the mouse pointer if unused for a duration
+set_from_resource $i3-wm.program.unclutter i3-wm.program.unclutter /usr/bin/unclutter -b
+exec --no-startup-id $i3-wm.program.unclutter
