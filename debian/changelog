@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (3.0.2-1) focal; urgency=medium
+
+  [ Ken Gilmer ]
+  * Remove regolith-styles as a dependency, as it's deprecated.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Wed, 27 Jan 2021 21:20:36 -0800
+
 regolith-i3-gaps-config (3.0.1-1) focal; urgency=medium
 
   [ Ken Gilmer ]
