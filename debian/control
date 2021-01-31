@@ -18,7 +18,6 @@ Depends: ${misc:Depends},
   xdotool
 Recommends:
   i3-next-workspace,
-  i3-snapshot,
   network-manager-gnome,
   regolith-i3xrocks-config,
   regolith-ftue,
@@ -31,3 +30,10 @@ Replaces: regolith-i3-wm
 Description: Regolith i3-gaps config file
  This is the i3 config file for the Regolith desktop environment. It
  assumes that i3-gaps is running and that Xresources have been loaded.
+
+Package: regolith-i3-snapshot-config
+Architecture: any
+Depends: ${misc:Depends},
+  regolith-i3-gaps-config,
+  i3-snapshot
+Description: Save and restore in-session window layouts in i3

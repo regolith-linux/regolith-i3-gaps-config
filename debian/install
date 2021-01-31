@@ -14,7 +14,6 @@ partials/55_session_keybindings   /etc/regolith/i3/conf.d
 partials/60_config_keybindings    /etc/regolith/i3/conf.d
 partials/65_appearance            /etc/regolith/i3/conf.d
 partials/70_bar                   /etc/regolith/i3/conf.d
-partials/75_i3-snapshot           /etc/regolith/i3/conf.d
 partials/80_compositor            /etc/regolith/i3/conf.d
 partials/82_rofication            /etc/regolith/i3/conf.d
 partials/84_ftue                  /etc/regolith/i3/conf.d
