@@ -75,3 +75,5 @@ i3-wm.workspace.16.name: WORKSPACE_NAME(16, glyph_font, QUOTE(color_magenta), gl
 i3-wm.workspace.17.name: WORKSPACE_NAME(17, glyph_font, QUOTE(color_violet), glyph)
 i3-wm.workspace.18.name: WORKSPACE_NAME(18, glyph_font, QUOTE(color_base1), glyph)
 i3-wm.workspace.19.name: WORKSPACE_NAME(19, glyph_font, QUOTE(color_blue), glyph)
+
+rofi.theme: rofi_theme

@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (3.0.6-1) focal; urgency=medium
+
+  [ Ken Gilmer ]
+  * Map rofi file in Xresource partial
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 31 Jan 2021 20:10:29 -0800
+
 regolith-i3-gaps-config (3.0.5-1) focal; urgency=medium
 
   [ Ken Gilmer ]
