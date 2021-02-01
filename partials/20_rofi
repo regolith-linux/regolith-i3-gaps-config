@@ -1,4 +1,4 @@
-set_from_resource $rofiTheme rofi.theme /etc/regolith/styles/lascaille/rofi.rasi
+set_from_resource $rofiTheme rofi.theme /usr/share/regolith-look/minimal/rofi.rasi
 
 ## Launch // Application // <> Space ##
 set_from_resource $i3-wm.binding.launcher.app i3-wm.binding.launcher.app space

@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (3.0.5-1) focal; urgency=medium
+
+  [ Ken Gilmer ]
+  * Fix default path to rofi theme
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 31 Jan 2021 20:05:03 -0800
+
 regolith-i3-gaps-config (3.0.4-1) focal; urgency=medium
 
   [ Ken Gilmer ]
