@@ -1,3 +1,10 @@
+regolith-i3-gaps-config (3.0.4-1) focal; urgency=medium
+
+  [ Ken Gilmer ]
+  * Decompose primary i3-gaps config package into smaller binary packages to reduce coupling.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sun, 31 Jan 2021 18:25:08 -0800
+
 regolith-i3-gaps-config (3.0.3-1) focal; urgency=medium
 
   [ Ken Gilmer ]

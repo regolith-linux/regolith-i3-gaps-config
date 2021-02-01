@@ -10,30 +10,76 @@ Package: regolith-i3-gaps-config
 Architecture: any
 Depends: ${misc:Depends},
   i3-gaps-wm,
-  i3xrocks,
-  gnome-control-center,
-  gnome-settings-daemon,
   xdg-utils,
-  regolith-compositor-none | regolith-compositor,
   xdotool
-Recommends:
-  i3-next-workspace,
-  network-manager-gnome,
-  regolith-i3xrocks-config,
-  regolith-ftue,
-  regolith-rofication,
-  regolith-rofi-config,
-  regolith-unclutter-xfixes,
-  rofi
 Conflicts: regolith-i3-wm
 Replaces: regolith-i3-wm
 Description: Regolith i3-gaps config file
- This is the i3 config file for the Regolith desktop environment. It
- assumes that i3-gaps is running and that Xresources have been loaded.
+ This is the i3 config file for the Regolith desktop environment.
 
-Package: regolith-i3-snapshot-config
+Package: regolith-i3-snapshot
 Architecture: any
 Depends: ${misc:Depends},
   regolith-i3-gaps-config,
   i3-snapshot
 Description: Save and restore in-session window layouts in i3
+
+Package: regolith-i3-ftue
+Architecture: any
+Depends: ${misc:Depends},
+  regolith-ftue,
+  regolith-i3-gaps-config,
+  remontoire
+Description: Help for new users
+
+Package: regolith-i3-compositor
+Architecture: any
+Depends: ${misc:Depends},
+  regolith-compositor-none | regolith-compositor
+Description: Integration of compositor into i3
+
+Package: regolith-i3-unclutter
+Architecture: any
+Depends: ${misc:Depends},
+  regolith-unclutter-xfixes
+Description: Hide the mouse cursor if not used
+
+Package: regolith-i3-rofi
+Architecture: any
+Depends: ${misc:Depends},
+    rofi,
+    regolith-rofi-config
+Description: Global menu system
+
+Package: regolith-i3-rofication
+Architecture: any
+Depends: ${misc:Depends},
+    rofi,
+    regolith-rofication
+Description: Rofi based notifications
+
+Package: regolith-i3-gnome
+Architecture: any
+Depends: ${misc:Depends},
+    gnome-control-center,
+    gnome-settings-daemon
+Description: gnome integrations for system management
+
+Package: regolith-i3-next-workspace
+Architecture: any
+Depends: ${misc:Depends},
+    i3-next-workspace
+Description: easy i3 workspace creation
+
+Package: regolith-i3-i3xrocks
+Architecture: any
+Depends: ${misc:Depends},
+    i3xrocks,
+    regolith-i3xrocks-config
+Description: regolith default bar and status indicators
+
+Package: regolith-i3-networkmanager
+Architecture: any
+Depends: ${misc:Depends},
+  network-manager-gnome
+Description: nm-applet integration with i3

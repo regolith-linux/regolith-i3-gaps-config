@@ -1,3 +1,8 @@
+## Launch // Notification Viewer // <> n ##
+set_from_resource $i3-wm.binding.notification_ui i3-wm.binding.notification_ui n
+set_from_resource $i3-wm.program.notification_ui i3-wm.program.notification_ui /usr/bin/rofication-gui
+bindsym $mod+$i3-wm.binding.notification_ui exec $i3-wm.program.notification_ui
+
 # Start Rofication for notifications
 set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon
 exec --no-startup-id $i3-wm.program.notifications

@@ -26,8 +26,3 @@ bindsym $mod+$i3-wm.binding.bluetooth exec $i3-wm.program.bluetooth
 set_from_resource $i3-wm.binding.files i3-wm.binding.files Shift+n
 set_from_resource $i3-wm.program.files i3-wm.program.files /usr/bin/nautilus --new-window
 bindsym $mod+$i3-wm.binding.files exec $i3-wm.program.files
-
-## Launch // Notification Viewer // <> n ##
-set_from_resource $i3-wm.binding.notification_ui i3-wm.binding.notification_ui n
-set_from_resource $i3-wm.program.notification_ui i3-wm.program.notification_ui /usr/bin/rofication-gui
-bindsym $mod+$i3-wm.binding.notification_ui exec $i3-wm.program.notification_ui
