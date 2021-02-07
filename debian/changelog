@@ -1,3 +1,11 @@
+regolith-i3-config (3.0.7-1) focal; urgency=medium
+
+  [ Ken Gilmer ]
+  * Move non-gaps settings from the gaps partial into appearance partial.
+  * Rename root package to regolith-i3-config.  Extract i3-gaps specific configuration to regolith-i3-gaps-partial package.
+
+ -- Regolith Linux <regolith.linux@gmail.com>  Sat, 06 Feb 2021 18:39:26 -0800
+
 regolith-i3-gaps-config (3.0.6-1) focal; urgency=medium
 
   [ Ken Gilmer ]

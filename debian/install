@@ -5,7 +5,6 @@ partials/05_meta-keybindings      /etc/regolith/i3/conf.d
 partials/10_workspaces            /etc/regolith/i3/conf.d
 partials/15_primary-keybindings   /etc/regolith/i3/conf.d
 partials/30_navigation            /etc/regolith/i3/conf.d
-partials/35_i3-gaps               /etc/regolith/i3/conf.d
 partials/50_resize-mode           /etc/regolith/i3/conf.d
 partials/55_session_keybindings   /etc/regolith/i3/conf.d
 partials/65_appearance            /etc/regolith/i3/conf.d
