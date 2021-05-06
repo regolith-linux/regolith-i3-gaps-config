@@ -348,6 +348,10 @@ floating_modifier $mod
 set_from_resource $i3-wm.hide.edge.borders i3-wm.hide.edge.borders smart
 hide_edge_borders $i3-wm.hide.edge.borders
 
+# Set the default layout mode
+set_from_resource $i3-wm.workspace.layout i3-wm.workspace.layout default
+workspace_layout $i3-wm.workspace.layout
+
 ###############################################################################
 # Session Management
 ###############################################################################
