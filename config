@@ -86,6 +86,13 @@ set_from_resource $ws9_key  i3-wm.workspace.09.key 9
 set_from_resource $ws10_key i3-wm.workspace.10.key 0
 
 ###############################################################################
+# Rofication date & time format in Python format, see
+# https://docs.python.org/3/library/datetime.html
+# Defaults to locale default. Use empty string ("") for no timestamp
+###############################################################################
+set_from_resource $rofication_datetime_format rofication_datetime_format ""
+
+###############################################################################
 # Launcher dialogs
 ###############################################################################
 
@@ -650,7 +657,7 @@ set_from_resource $i3-wm.program.compositor i3-wm.program.compositor /usr/share/
 exec_always --no-startup-id $i3-wm.program.compositor
 
 # Start Rofication for notifications
-set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon
+set_from_resource $i3-wm.program.notifications i3-wm.program.notifications /usr/bin/rofication-daemon --tsformat $rofication_datetime_format
 exec --no-startup-id $i3-wm.program.notifications
 
 # Launch first time user experience script
