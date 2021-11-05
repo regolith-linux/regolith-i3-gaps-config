@@ -88,7 +88,7 @@ set_from_resource $ws10_key i3-wm.workspace.10.key 0
 ###############################################################################
 # Rofication date & time format in Python format, see
 # https://docs.python.org/3/library/datetime.html
-# Defaults to locale default. Use empty string ("") for no timestamp
+# Defaults to no time information. Use "%x %X" for user locale.
 ###############################################################################
 set_from_resource $rofication_datetime_format rofication_datetime_format ""
 
