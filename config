@@ -14,13 +14,13 @@
 # without having to make a copy of this config file.
 # The benefit to not copying this file is easier upgrades in the future.
 # To update a value in this config without making a copy, update the Xresource
-# value in the file ~/.config/regolith/Xresources.
+# value in the file ~/.config/regolith2/Xresources.
 #
 # For example, to change the bar position to the top of the screen this is the
 # i3 config entry in this file:
 # set_from_resource $i3-wm.bar.position i3-wm.bar.position bottom
 #
-# So add this line to ~/.config/regolith/Xresources to change it's value:
+# So add this line to ~/.config/regolith2/Xresources to change it's value:
 # i3-wm.bar.position: top
 #
 # Reload i3 after making Xresource changes.  Learn more at
@@ -621,7 +621,7 @@ set_from_resource $i3-wm.bar.stripworkspacenumbers i3-wm.bar.stripworkspacenumbe
 set_from_resource $i3-wm.bar.mode i3-wm.bar.mode dock
 
 # i3xrocks config file. Override this for a custom status bar generator.
-set_from_resource $i3-wm.bar.status_command i3-wm.bar.status_command i3xrocks -u ~/.config/regolith/i3xrocks/conf.d -d /etc/regolith/i3xrocks/conf.d
+set_from_resource $i3-wm.bar.status_command i3-wm.bar.status_command i3xrocks -u ~/.config/regolith2/i3xrocks/conf.d -d /etc/regolith2/i3xrocks/conf.d
 
 # The bar configuration
 bar {
