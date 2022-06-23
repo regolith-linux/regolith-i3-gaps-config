@@ -486,24 +486,24 @@ mode "Resize Mode" {
 
         ## Resize // Resize Window // ↑ ↓ ← → ##
         bindsym Left resize shrink width 6 px or 6 ppt
-        bindsym Down resize grow height 6 px or 6 ppt
-        bindsym Up resize shrink height 6 px or 6 ppt
+        bindsym Down resize shrink height 6 px or 6 ppt
+        bindsym Up resize grow height 6 px or 6 ppt
         bindsym Right resize grow width 6 px or 6 ppt
 
         bindsym Shift+Left resize shrink width 12 px or 12 ppt
-        bindsym Shift+Down resize grow height 12 px or 12 ppt
-        bindsym Shift+Up resize shrink height 12 px or 12 ppt
+        bindsym Shift+Down resize shrink height 12 px or 12 ppt
+        bindsym Shift+Up resize grow height 12 px or 12 ppt
         bindsym Shift+Right resize grow width 12 px or 12 ppt
 
         ## Resize // Resize Window // k j h l ##
         bindsym $i3-wm.binding.left resize shrink width 6 px or 6 ppt
-        bindsym $i3-wm.binding.up resize grow height 6 px or 6 ppt
         bindsym $i3-wm.binding.down resize shrink height 6 px or 6 ppt
+        bindsym $i3-wm.binding.up resize grow height 6 px or 6 ppt
         bindsym $i3-wm.binding.right resize grow width 6 px or 6 ppt
 
         bindsym $i3-wm.binding.move_left resize shrink width 12 px or 12 ppt
-        bindsym $i3-wm.binding.move_up resize grow height 12 px or 12 ppt
         bindsym $i3-wm.binding.move_down resize shrink height 12 px or 12 ppt
+        bindsym $i3-wm.binding.move_up resize grow height 12 px or 12 ppt
         bindsym $i3-wm.binding.move_right resize grow width 12 px or 12 ppt
 
         ## Resize // Window Gaps // + - ##
